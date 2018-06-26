@@ -1,0 +1,6 @@
+<div class="detailed-container" [ngStyle]="{ 'background': card.cardBackgrowndPrimary}">
+  <div class="img-container">
+    <img src="{{card.cardImage}}" alt="" [ngStyle]="{ 'background': card.cardBackgrowndPrimaryLight , 'border': card.getBorder() }">
+  </div>
+  <div class="card-title">{{card.cardTitle}}</div>
+</div>
