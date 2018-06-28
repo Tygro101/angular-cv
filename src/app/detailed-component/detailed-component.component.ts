@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { CardContent } from '../data-holders/card-content';
 
 @Component({
@@ -12,10 +12,19 @@ import { CardContent } from '../data-holders/card-content';
 export class DetailedComponentComponent implements OnInit {
 
   @Input() card:CardContent;
+  @Input() hideAndShow:boolean;
+  @Output() sizeChange = new EventEmitter<boolean>();
+
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public close():void
+  {
+    this.hideAndShow = false;
+    this.sizeChange.emit(this.hideAndShow);
   }
 
 }

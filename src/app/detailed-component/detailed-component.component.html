@@ -1,4 +1,5 @@
 <div class="detailed-container" [ngStyle]="{ 'background': card.cardBackgrowndPrimary}">
+  <span (click)="close()" class="close_image" [ngStyle]="{ 'background': card.cardBackgrowndPrimary}"></span>
   <div class="img-container">
     <img src="{{card.cardImage}}" alt="" [ngStyle]="{ 'background': card.cardBackgrowndPrimaryLight , 'border': card.getBorder() }">
   </div>

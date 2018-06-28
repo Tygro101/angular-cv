@@ -10,6 +10,7 @@ import { CardsDataService } from './services/cards-data.service';
 export class AppComponent implements OnInit{
   cards:Array<CardContent>;
   public selectedCard:CardContent = null;
+  public showDetailedCard:boolean = false;
   
   constructor(private dataService:CardsDataService){ 
   }
@@ -25,6 +26,11 @@ export class AppComponent implements OnInit{
 
   setSelectedCard(card:CardContent){
     this.selectedCard = card;
+    this.showDetailedCard = true;
+  }
+
+  public closeDetailedCard(value:boolean){
+    this.showDetailedCard = value;
   }
 }
 

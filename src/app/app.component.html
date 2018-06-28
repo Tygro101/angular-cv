@@ -4,10 +4,10 @@
   </div>
 
   <div class="contnet">
-    <app-detailed-component *ngIf="selectedCard" [(card)]="selectedCard"></app-detailed-component>
+    <app-detailed-component *ngIf="showDetailedCard"  (sizeChange)="closeDetailedCard($event)"  [(card)]="selectedCard"></app-detailed-component>
     <div class="card" *ngFor="let crd of cards" [ngStyle]="{ 'background': crd.cardBackgrowndPrimary}" (click)="setSelectedCard(crd)">
       <div class="img-container">
-        <img src="{{crd.cardImage}}" alt="" 
+        <img src="{{crd.cardImage}}" alt=""
         [ngStyle]="{ 'background': crd.cardBackgrowndPrimaryLight , 'border': crd.getBorder() }">
       </div>
       <div class="card-title">{{crd.cardTitle}}</div>
