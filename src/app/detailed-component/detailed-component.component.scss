@@ -56,6 +56,13 @@
     color: beige;
   }
   .content-header{
+    display: flex;
+    img{
+      cursor: pointer;
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+    }
     margin: 4px;
     margin-left: 9px;
     font-family: cursive;
