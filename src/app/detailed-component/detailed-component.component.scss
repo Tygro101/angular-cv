@@ -1,8 +1,12 @@
+
+
 .detailed-container {
   max-width: 500px;
-  max-height: 350px;
+  min-width: 350px;
+  //max-height: 350px;
   min-height: 200px;
   position: absolute;
+
   margin: 0 auto;
   align-self: center;
   border-radius: 10px;
@@ -42,6 +46,7 @@
     }
   }
   .card-title {
+    font-family: cursive !important;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -49,5 +54,14 @@
       sans-serif;
     font-weight: bold;
     color: beige;
+  }
+  .content-header{
+    margin: 4px;
+    margin-left: 9px;
+    font-family: cursive;
+    color: antiquewhite;
+    font-weight: bold;
+  }:last-child{
+    margin-bottom: 15px;
   }
 }

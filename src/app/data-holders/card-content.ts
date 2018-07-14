@@ -1,25 +1,17 @@
 export class CardContent {
-  public cardTitle: string;
-  public cardImage: string;
-  public cardBackgrowndPrimary: string;
-  public cardBackgrowndPrimaryLight: string;
-  public cardBackgrowndPrimaryDark: string;
+  public title: string;
+  public image: string;
+  public content: Array<string>;
 
   constructor(
-    cardTitle: string,
-    cardImage: string,
-    cardBackgrowndPrimary: string,
-    cardBackgrowndPrimaryLight: string,
-    cardBackgrowndPrimaryDark: string) {
-    this.cardTitle = cardTitle;
-    this.cardImage = cardImage;
-    this.cardBackgrowndPrimary = cardBackgrowndPrimary;
-    this.cardBackgrowndPrimaryDark = cardBackgrowndPrimaryDark;
-    this.cardBackgrowndPrimaryLight = cardBackgrowndPrimaryLight;
+    title: string,
+    image: string) {
+    this.title = title;
+    this.image = image;
+    this.content = new Array<string>();
   }
 
-  public getBorder():string
-  {
-    return '0px solid '+ this.cardBackgrowndPrimaryDark;
+  public addContentData(data:string):void{
+    this.content.push(data);
   }
 }

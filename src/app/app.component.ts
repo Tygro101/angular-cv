@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CardContent } from './data-holders/card-content';
+import { CardFace } from './data-holders/card-face';
 import { CardsDataService } from './services/cards-data.service';
 
 @Component({
@@ -8,8 +8,8 @@ import { CardsDataService } from './services/cards-data.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  cards:Array<CardContent>;
-  public selectedCard:CardContent = null;
+  cards:Array<CardFace>;
+  public selectedCard:CardFace = null;
   public showDetailedCard:boolean = false;
   
   constructor(private dataService:CardsDataService){ 
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
     console.log(text);
   }
 
-  setSelectedCard(card:CardContent){
+  setSelectedCard(card:CardFace){
     this.selectedCard = card;
     this.showDetailedCard = true;
   }

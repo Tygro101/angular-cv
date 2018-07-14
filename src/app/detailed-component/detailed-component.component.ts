@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
-import { CardContent } from '../data-holders/card-content';
+import { CardFace } from '../data-holders/card-face';
 
 @Component({
   selector: 'app-detailed-component',
@@ -11,7 +11,7 @@ import { CardContent } from '../data-holders/card-content';
 
 export class DetailedComponentComponent implements OnInit {
 
-  @Input() card:CardContent;
+  @Input() card:CardFace;
   @Input() hideAndShow:boolean;
   @Output() sizeChange = new EventEmitter<boolean>();
 

@@ -4,4 +4,9 @@
     <img src="{{card.cardImage}}" alt="" [ngStyle]="{ 'background': card.cardBackgrowndPrimaryLight , 'border': card.getBorder() }">
   </div>
   <div class="card-title">{{card.cardTitle}}</div>
+  <div class="content-header" *ngFor="let content of card.contents">
+    {{content.title}}
+    <li class="content-body" *ngFor="let raw of content.content">
+    </li>
+  </div>
 </div>
