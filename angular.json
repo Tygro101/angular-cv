@@ -24,7 +24,11 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets/images/profile.jpg",
+              "src/assets/images/android.png",
+              "src/assets/images/angular.png",
+              "src/assets/images/nodejs.png",
+              "src/assets/images/unity_3d.png"
             ],
             "styles": [
               "src/styles.scss"
