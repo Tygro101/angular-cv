@@ -1,0 +1,14 @@
+<div *ngIf='show' class="detailed-container" [ngStyle]="{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}">
+  <span (click)="close()" class="close_image" [ngStyle]="{ 'background': card.cardBackgrowndPrimary}"></span>
+  <div class="img-container">
+    <img src="{{card.cardImage}}" alt="" [ngStyle]="{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }">
+  </div>
+  <div class="card-title">{{card.cardTitle}}</div>
+  
+  <div class="content-header" *ngFor="let content of card.content">
+    <img src="" alt="">
+    {{content}}
+    <li class="content-body" *ngFor="let raw of content.content">
+    </li>
+  </div>
+</div>

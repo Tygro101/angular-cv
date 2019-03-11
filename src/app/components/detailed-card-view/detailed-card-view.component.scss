@@ -3,7 +3,9 @@
 .detailed-container {
   max-width: 500px;
   min-width: 350px;
+  
   //max-height: 350px;
+  z-index: 1;
   min-height: 200px;
   position: absolute;
 

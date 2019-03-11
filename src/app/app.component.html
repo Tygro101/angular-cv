@@ -3,14 +3,8 @@
     <h2>CV</h2>
   </div>
 
+  <app-detailed-component></app-detailed-component>
   <div class="contnet">
-    <app-detailed-component *ngIf="showDetailedCard"  (sizeChange)="closeDetailedCard($event)"  [(card)]="selectedCard"></app-detailed-component>
-    <div class="card" *ngFor="let crd of cards" [ngStyle]="{ 'background': crd.cardBackgrowndPrimary}" (click)="setSelectedCard(crd)">
-      <div class="img-container">
-        <img src="{{crd.cardImage}}" alt=""
-        [ngStyle]="{ 'background': crd.cardBackgrowndPrimaryLight , 'border': crd.getBorder() }">
-      </div>
-      <div class="card-title">{{crd.cardTitle}}</div>
-    </div>
+    <card class="item" *ngFor="let crd of cards$ | async" [card]='crd' (onClick)='cardSelected($event)'></card>
   </div>
 </div>
