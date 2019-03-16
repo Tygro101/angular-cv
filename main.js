@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
-/***/ "./$$_lazy_route_resource lazy recursive":
-/*!******************************************************!*\
-  !*** ./$$_lazy_route_resource lazy namespace object ***!
-  \******************************************************/
+/***/ "./src/$$_lazy_route_resource lazy recursive":
+/*!**********************************************************!*\
+  !*** ./src/$$_lazy_route_resource lazy namespace object ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -19,14 +19,14 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
+webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "./app/app.component.html":
-/*!********************************!*\
-  !*** ./app/app.component.html ***!
-  \********************************/
+/***/ "./src/app/app.component.html":
+/*!************************************!*\
+  !*** ./src/app/app.component.html ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -34,10 +34,10 @@ module.exports = "<div class=\"container\">\r\n  <div class=\"bar\">\r\n    <h2>
 
 /***/ }),
 
-/***/ "./app/app.component.scss":
-/*!********************************!*\
-  !*** ./app/app.component.scss ***!
-  \********************************/
+/***/ "./src/app/app.component.scss":
+/*!************************************!*\
+  !*** ./src/app/app.component.scss ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -45,20 +45,20 @@ module.exports = ".container {\n  max-width: 740px;\n  max-height: 1000px;\n  po
 
 /***/ }),
 
-/***/ "./app/app.component.ts":
-/*!******************************!*\
-  !*** ./app/app.component.ts ***!
-  \******************************/
+/***/ "./src/app/app.component.ts":
+/*!**********************************!*\
+  !*** ./src/app/app.component.ts ***!
+  \**********************************/
 /*! exports provided: AppComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngrx/store */ "../node_modules/@ngrx/store/fesm5/store.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "../node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var src_app_components_detailed_card_view_store_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/components/detailed-card-view/store/actions */ "./app/components/detailed-card-view/store/actions.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var src_app_components_detailed_card_view_store_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/components/detailed-card-view/store/actions */ "./src/app/components/detailed-card-view/store/actions.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -92,8 +92,8 @@ var AppComponent = /** @class */ (function () {
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(/*! ./app.component.html */ "./app/app.component.html"),
-            styles: [__webpack_require__(/*! ./app.component.scss */ "./app/app.component.scss")]
+            template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
+            styles: [__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")]
         }),
         __metadata("design:paramtypes", [_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["Store"]])
     ], AppComponent);
@@ -104,33 +104,35 @@ var AppComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./app/app.module.ts":
-/*!***************************!*\
-  !*** ./app/app.module.ts ***!
-  \***************************/
+/***/ "./src/app/app.module.ts":
+/*!*******************************!*\
+  !*** ./src/app/app.module.ts ***!
+  \*******************************/
 /*! exports provided: AppModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "../node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngrx/store */ "../node_modules/@ngrx/store/fesm5/store.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./app/app.component.ts");
-/* harmony import */ var _components_detailed_card_view_detailed_card_view_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/detailed-card-view/detailed-card-view.component */ "./app/components/detailed-card-view/detailed-card-view.component.ts");
-/* harmony import */ var _components_card_card_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/card/card.component */ "./app/components/card/card.component.ts");
-/* harmony import */ var _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngrx/store-devtools */ "../node_modules/@ngrx/store-devtools/fesm5/store-devtools.js");
-/* harmony import */ var src_app_store_reducers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/store/reducers */ "./app/store/reducers.ts");
-/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/environments/environment */ "./environments/environment.ts");
-/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ngrx/effects */ "../node_modules/@ngrx/effects/fesm5/effects.js");
-/* harmony import */ var _components_detailed_card_view_store_effects__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/detailed-card-view/store/effects */ "./app/components/detailed-card-view/store/effects.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_detailed_card_view_detailed_card_view_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/detailed-card-view/detailed-card-view.component */ "./src/app/components/detailed-card-view/detailed-card-view.component.ts");
+/* harmony import */ var _components_card_card_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/card/card.component */ "./src/app/components/card/card.component.ts");
+/* harmony import */ var _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngrx/store-devtools */ "./node_modules/@ngrx/store-devtools/fesm5/store-devtools.js");
+/* harmony import */ var src_app_store_reducers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/store/reducers */ "./src/app/store/reducers.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ngrx/effects */ "./node_modules/@ngrx/effects/fesm5/effects.js");
+/* harmony import */ var _components_detailed_card_view_store_effects__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/detailed-card-view/store/effects */ "./src/app/components/detailed-card-view/store/effects.ts");
+/* harmony import */ var src_app_components_detailed_content_detailed_content_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/components/detailed-content/detailed-content.component */ "./src/app/components/detailed-content/detailed-content.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -150,7 +152,8 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
                 _components_detailed_card_view_detailed_card_view_component__WEBPACK_IMPORTED_MODULE_4__["DetailedCardViewComponent"],
-                _components_card_card_component__WEBPACK_IMPORTED_MODULE_5__["CardComponent"]
+                _components_card_card_component__WEBPACK_IMPORTED_MODULE_5__["CardComponent"],
+                src_app_components_detailed_content_detailed_content_component__WEBPACK_IMPORTED_MODULE_11__["DetailedContentComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -172,10 +175,10 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./app/components/card/card.component.html":
-/*!*************************************************!*\
-  !*** ./app/components/card/card.component.html ***!
-  \*************************************************/
+/***/ "./src/app/components/card/card.component.html":
+/*!*****************************************************!*\
+  !*** ./src/app/components/card/card.component.html ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -183,10 +186,10 @@ module.exports = "<div class=\"card ripple\" [ngStyle]=\"{ 'background': card.ca
 
 /***/ }),
 
-/***/ "./app/components/card/card.component.scss":
-/*!*************************************************!*\
-  !*** ./app/components/card/card.component.scss ***!
-  \*************************************************/
+/***/ "./src/app/components/card/card.component.scss":
+/*!*****************************************************!*\
+  !*** ./src/app/components/card/card.component.scss ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -194,17 +197,17 @@ module.exports = ".card {\n  width: 140px;\n  margin: 10px;\n  background: #3333
 
 /***/ }),
 
-/***/ "./app/components/card/card.component.ts":
-/*!***********************************************!*\
-  !*** ./app/components/card/card.component.ts ***!
-  \***********************************************/
+/***/ "./src/app/components/card/card.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/components/card/card.component.ts ***!
+  \***************************************************/
 /*! exports provided: CardComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardComponent", function() { return CardComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -235,8 +238,8 @@ var CardComponent = /** @class */ (function () {
     CardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'card',
-            template: __webpack_require__(/*! ./card.component.html */ "./app/components/card/card.component.html"),
-            styles: [__webpack_require__(/*! ./card.component.scss */ "./app/components/card/card.component.scss")]
+            template: __webpack_require__(/*! ./card.component.html */ "./src/app/components/card/card.component.html"),
+            styles: [__webpack_require__(/*! ./card.component.scss */ "./src/app/components/card/card.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], CardComponent);
@@ -247,17 +250,17 @@ var CardComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./app/components/card/store/reducer.ts":
-/*!**********************************************!*\
-  !*** ./app/components/card/store/reducer.ts ***!
-  \**********************************************/
+/***/ "./src/app/components/card/store/reducer.ts":
+/*!**************************************************!*\
+  !*** ./src/app/components/card/store/reducer.ts ***!
+  \**************************************************/
 /*! exports provided: CardsReducers */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardsReducers", function() { return CardsReducers; });
-/* harmony import */ var src_app_store_state__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/store/state */ "./app/store/state.ts");
+/* harmony import */ var src_app_store_state__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/store/state */ "./src/app/store/state.ts");
 
 function CardsReducers(state, action) {
     if (state === void 0) { state = src_app_store_state__WEBPACK_IMPORTED_MODULE_0__["CARDS"]; }
@@ -270,21 +273,21 @@ function CardsReducers(state, action) {
 
 /***/ }),
 
-/***/ "./app/components/detailed-card-view/detailed-card-view.component.html":
-/*!*****************************************************************************!*\
-  !*** ./app/components/detailed-card-view/detailed-card-view.component.html ***!
-  \*****************************************************************************/
+/***/ "./src/app/components/detailed-card-view/detailed-card-view.component.html":
+/*!*********************************************************************************!*\
+  !*** ./src/app/components/detailed-card-view/detailed-card-view.component.html ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}\">\r\n  <span (click)=\"close()\" class=\"close_image\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary}\"></span>\r\n  <div class=\"img-container\">\r\n    <img src=\"{{card.cardImage}}\" alt=\"\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }\">\r\n  </div>\r\n  <div class=\"card-title\">{{card.cardTitle}}</div>\r\n  \r\n  <div class=\"content-header\" *ngFor=\"let content of card.content\">\r\n    <img src=\"\" alt=\"\">\r\n    {{content}}\r\n    <li class=\"content-body\" *ngFor=\"let raw of content.content\">\r\n    </li>\r\n  </div>\r\n</div>"
+module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}\">\r\n  <span (click)=\"close()\" class=\"close_image\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary}\"></span>\r\n  <div class=\"img-container\">\r\n    <img src=\"{{card.cardImage}}\" alt=\"\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }\">\r\n  </div>\r\n  <div class=\"card-title\">{{card.cardTitle}}</div>\r\n  <detailed-content>\r\n    <div *ngFor='let highlight of highlights' class='item'>\r\n      <img src=\"/assets/img/angular.png\" alt=\"\">\r\n      <div class=\"title\">\r\n          <div >{{highlight.title.key}}:</div>\r\n          <div >{{highlight.title.value}}</div>\r\n      </div>\r\n    </div>\r\n  </detailed-content>\r\n</div>"
 
 /***/ }),
 
-/***/ "./app/components/detailed-card-view/detailed-card-view.component.scss":
-/*!*****************************************************************************!*\
-  !*** ./app/components/detailed-card-view/detailed-card-view.component.scss ***!
-  \*****************************************************************************/
+/***/ "./src/app/components/detailed-card-view/detailed-card-view.component.scss":
+/*!*********************************************************************************!*\
+  !*** ./src/app/components/detailed-card-view/detailed-card-view.component.scss ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -292,19 +295,19 @@ module.exports = ".detailed-container {\n  max-width: 500px;\n  min-width: 350px
 
 /***/ }),
 
-/***/ "./app/components/detailed-card-view/detailed-card-view.component.ts":
-/*!***************************************************************************!*\
-  !*** ./app/components/detailed-card-view/detailed-card-view.component.ts ***!
-  \***************************************************************************/
+/***/ "./src/app/components/detailed-card-view/detailed-card-view.component.ts":
+/*!*******************************************************************************!*\
+  !*** ./src/app/components/detailed-card-view/detailed-card-view.component.ts ***!
+  \*******************************************************************************/
 /*! exports provided: DetailedCardViewComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailedCardViewComponent", function() { return DetailedCardViewComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngrx/store */ "../node_modules/@ngrx/store/fesm5/store.js");
-/* harmony import */ var _store_selectors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/selectors */ "./app/components/detailed-card-view/store/selectors.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var _store_selectors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/selectors */ "./src/app/components/detailed-card-view/store/selectors.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -327,6 +330,8 @@ var DetailedCardViewComponent = /** @class */ (function () {
             if (Object.keys(face).length > 0) {
                 _this.show = true;
                 _this.card = face;
+                _this.highlights = face.content.highlights;
+                _this.description = face.content.description;
             }
         });
     };
@@ -336,8 +341,8 @@ var DetailedCardViewComponent = /** @class */ (function () {
     DetailedCardViewComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-detailed-component',
-            template: __webpack_require__(/*! ./detailed-card-view.component.html */ "./app/components/detailed-card-view/detailed-card-view.component.html"),
-            styles: [__webpack_require__(/*! ./detailed-card-view.component.scss */ "./app/components/detailed-card-view/detailed-card-view.component.scss")]
+            template: __webpack_require__(/*! ./detailed-card-view.component.html */ "./src/app/components/detailed-card-view/detailed-card-view.component.html"),
+            styles: [__webpack_require__(/*! ./detailed-card-view.component.scss */ "./src/app/components/detailed-card-view/detailed-card-view.component.scss")]
         }),
         __metadata("design:paramtypes", [_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["Store"]])
     ], DetailedCardViewComponent);
@@ -348,10 +353,10 @@ var DetailedCardViewComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./app/components/detailed-card-view/store/actions.ts":
-/*!************************************************************!*\
-  !*** ./app/components/detailed-card-view/store/actions.ts ***!
-  \************************************************************/
+/***/ "./src/app/components/detailed-card-view/store/actions.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/components/detailed-card-view/store/actions.ts ***!
+  \****************************************************************/
 /*! exports provided: CARD_SELECTED, CARD_VIEW_SETTED, CardSelected, CardSetted */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -383,21 +388,21 @@ var CardSetted = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./app/components/detailed-card-view/store/effects.ts":
-/*!************************************************************!*\
-  !*** ./app/components/detailed-card-view/store/effects.ts ***!
-  \************************************************************/
+/***/ "./src/app/components/detailed-card-view/store/effects.ts":
+/*!****************************************************************!*\
+  !*** ./src/app/components/detailed-card-view/store/effects.ts ***!
+  \****************************************************************/
 /*! exports provided: DetailedViewEffects */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailedViewEffects", function() { return DetailedViewEffects; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngrx/effects */ "../node_modules/@ngrx/effects/fesm5/effects.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "../node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions */ "./app/components/detailed-card-view/store/actions.ts");
-/* harmony import */ var src_app_services_cards_data_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/cards-data.service */ "./app/services/cards-data.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngrx/effects */ "./node_modules/@ngrx/effects/fesm5/effects.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions */ "./src/app/components/detailed-card-view/store/actions.ts");
+/* harmony import */ var src_app_services_cards_data_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/cards-data.service */ "./src/app/services/cards-data.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -441,17 +446,17 @@ var DetailedViewEffects = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./app/components/detailed-card-view/store/reducers.ts":
-/*!*************************************************************!*\
-  !*** ./app/components/detailed-card-view/store/reducers.ts ***!
-  \*************************************************************/
+/***/ "./src/app/components/detailed-card-view/store/reducers.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/detailed-card-view/store/reducers.ts ***!
+  \*****************************************************************/
 /*! exports provided: DetailedCardViewReducer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailedCardViewReducer", function() { return DetailedCardViewReducer; });
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actions */ "./app/components/detailed-card-view/store/actions.ts");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actions */ "./src/app/components/detailed-card-view/store/actions.ts");
 
 var initialState = {};
 function DetailedCardViewReducer(state, action) {
@@ -467,10 +472,10 @@ function DetailedCardViewReducer(state, action) {
 
 /***/ }),
 
-/***/ "./app/components/detailed-card-view/store/selectors.ts":
-/*!**************************************************************!*\
-  !*** ./app/components/detailed-card-view/store/selectors.ts ***!
-  \**************************************************************/
+/***/ "./src/app/components/detailed-card-view/store/selectors.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/components/detailed-card-view/store/selectors.ts ***!
+  \******************************************************************/
 /*! exports provided: getDetailedViewCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -484,19 +489,82 @@ var getDetailedViewCard = function (state) {
 
 /***/ }),
 
-/***/ "./app/services/cards-data.service.ts":
-/*!********************************************!*\
-  !*** ./app/services/cards-data.service.ts ***!
-  \********************************************/
+/***/ "./src/app/components/detailed-content/detailed-content.component.html":
+/*!*****************************************************************************!*\
+  !*** ./src/app/components/detailed-content/detailed-content.component.html ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"highlights\">\n    <ng-content select=\".item\"></ng-content>\n  </div>\n  <div class=\"description\">\n    <ng-content select=\".description\"></ng-content>\n  </div>\n  <div class=\"video\">\n      <ng-content select=\"iframe\"></ng-content>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/detailed-content/detailed-content.component.scss":
+/*!*****************************************************************************!*\
+  !*** ./src/app/components/detailed-content/detailed-content.component.scss ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".container .highlights {\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: auto auto auto auto;\n      grid-template-columns: auto auto auto auto;\n  padding: 10px; }\n\n.container .highlights ::ng-deep .item {\n  margin: auto;\n  align-items: center;\n  display: flex;\n  height: 50px; }\n\n.container .highlights ::ng-deep .item img {\n    text-align: center;\n    height: 20px;\n    width: 20px;\n    -ms-grid-row-align: center;\n        align-self: center;\n    padding: 5px;\n    border-radius: 50%; }\n\n.container .highlights ::ng-deep .item .title {\n    font-size: 12px;\n    font-weight: bold;\n    font-family: cursive !important;\n    color: beige;\n    margin: auto; }\n\n.container .highlights ::ng-deep .item .title div {\n      margin-bottom: 0px; }\n"
+
+/***/ }),
+
+/***/ "./src/app/components/detailed-content/detailed-content.component.ts":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/detailed-content/detailed-content.component.ts ***!
+  \***************************************************************************/
+/*! exports provided: DetailedContentComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailedContentComponent", function() { return DetailedContentComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DetailedContentComponent = /** @class */ (function () {
+    function DetailedContentComponent() {
+    }
+    DetailedContentComponent.prototype.ngOnInit = function () {
+    };
+    DetailedContentComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'detailed-content',
+            template: __webpack_require__(/*! ./detailed-content.component.html */ "./src/app/components/detailed-content/detailed-content.component.html"),
+            styles: [__webpack_require__(/*! ./detailed-content.component.scss */ "./src/app/components/detailed-content/detailed-content.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], DetailedContentComponent);
+    return DetailedContentComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/cards-data.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/services/cards-data.service.ts ***!
+  \************************************************/
 /*! exports provided: CardsDataService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardsDataService", function() { return CardsDataService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "../node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var src_app_store_state__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/store/state */ "./app/store/state.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var src_app_store_state__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/store/state */ "./src/app/store/state.ts");
 var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -538,19 +606,19 @@ var CardsDataService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./app/store/reducers.ts":
-/*!*******************************!*\
-  !*** ./app/store/reducers.ts ***!
-  \*******************************/
+/***/ "./src/app/store/reducers.ts":
+/*!***********************************!*\
+  !*** ./src/app/store/reducers.ts ***!
+  \***********************************/
 /*! exports provided: rootReducers, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rootReducers", function() { return rootReducers; });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "../node_modules/redux/es/redux.js");
-/* harmony import */ var src_app_components_detailed_card_view_store_reducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/components/detailed-card-view/store/reducers */ "./app/components/detailed-card-view/store/reducers.ts");
-/* harmony import */ var src_app_components_card_store_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/components/card/store/reducer */ "./app/components/card/store/reducer.ts");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var src_app_components_detailed_card_view_store_reducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/components/detailed-card-view/store/reducers */ "./src/app/components/detailed-card-view/store/reducers.ts");
+/* harmony import */ var src_app_components_card_store_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/components/card/store/reducer */ "./src/app/components/card/store/reducer.ts");
 
 
 
@@ -563,10 +631,10 @@ var rootReducers = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])
 
 /***/ }),
 
-/***/ "./app/store/state.ts":
-/*!****************************!*\
-  !*** ./app/store/state.ts ***!
-  \****************************/
+/***/ "./src/app/store/state.ts":
+/*!********************************!*\
+  !*** ./src/app/store/state.ts ***!
+  \********************************/
 /*! exports provided: CARDS, CARD_FACES */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -627,11 +695,15 @@ var CARDS = [
 var CARD_FACES = [
     {
         cardId: 1,
-        content: [
-            "Name: Ran Tayeb",
-            "Degree: Electrical & Computer Engineer",
-            "Age: 31",
-        ]
+        content: {
+            highlights: [
+                { title: { key: 'Name', value: 'Ran Tayeb' }, image: 'Name icon' },
+                { title: { key: 'Email', value: 'tayebran@gmail.com' }, image: 'age icon' },
+                { title: { key: 'Status', value: 'Married' }, image: 'age icon' },
+                { title: { key: 'Mobile', value: '0523053392' }, image: 'age icon' }
+            ],
+            description: ""
+        }
     },
     {
         cardId: 2,
@@ -650,10 +722,10 @@ var CARD_FACES = [
 
 /***/ }),
 
-/***/ "./environments/environment.ts":
-/*!*************************************!*\
-  !*** ./environments/environment.ts ***!
-  \*************************************/
+/***/ "./src/environments/environment.ts":
+/*!*****************************************!*\
+  !*** ./src/environments/environment.ts ***!
+  \*****************************************/
 /*! exports provided: environment */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -677,19 +749,19 @@ var environment = {
 
 /***/ }),
 
-/***/ "./main.ts":
-/*!*****************!*\
-  !*** ./main.ts ***!
-  \*****************/
+/***/ "./src/main.ts":
+/*!*********************!*\
+  !*** ./src/main.ts ***!
+  \*********************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "../node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
-/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./app/app.module.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./environments/environment.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
 
 
 
@@ -704,13 +776,13 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /***/ }),
 
 /***/ 0:
-/*!***********************!*\
-  !*** multi ./main.ts ***!
-  \***********************/
+/*!***************************!*\
+  !*** multi ./src/main.ts ***!
+  \***************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Ran\Documents\GitHub\angular-cv\src\main.ts */"./main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Ran\Documents\GitHub\angular-cv\src\main.ts */"./src/main.ts");
 
 
 /***/ })
