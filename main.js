@@ -280,7 +280,7 @@ function CardsReducers(state, action) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}\">\r\n  <span (click)=\"close()\" class=\"close_image\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary}\"></span>\r\n  <div class=\"img-container\">\r\n    <img src=\"{{card.cardImage}}\" alt=\"\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }\">\r\n  </div>\r\n  <div class=\"card-title\">{{card.cardTitle}}</div>\r\n  <detailed-content>\r\n    <div *ngFor='let highlight of highlights' class='item'>\r\n      <img src=\"/assets/img/angular.png\" alt=\"\">\r\n      <div class=\"title\">\r\n          <div >{{highlight.title.key}}:</div>\r\n          <div >{{highlight.title.value}}</div>\r\n      </div>\r\n    </div>\r\n  </detailed-content>\r\n</div>"
+module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}\">\r\n  <span (click)=\"close()\" class=\"close_image\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary}\"></span>\r\n  <div class=\"img-container\">\r\n    <img src=\"{{card.cardImage}}\" alt=\"\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }\">\r\n  </div>\r\n  <div class=\"card-title\">{{card.cardTitle}}</div>\r\n  <detailed-content>\r\n    <div *ngFor='let highlight of highlights' class='item'>\r\n      <img src=\"assets/img/angular.png\" alt=\"\">\r\n      <div class=\"title\">\r\n          <div class=\"key\">{{highlight.title.key}}:</div>\r\n          <div class=\"value\">{{highlight.title.value}}</div>\r\n      </div>\r\n    </div>\r\n    <div class=\"description\">\r\n      {{description}}\r\n    </div>\r\n    <iframe allow=\"autoplay; encrypted-media\" src=\"https://www.youtube.com/embed/watch?v=N1u9I6UEclo&t=7s\" frameborder=\"0\"></iframe>\r\n  </detailed-content>\r\n</div>"
 
 /***/ }),
 
@@ -291,7 +291,7 @@ module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ '
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".detailed-container {\n  max-width: 500px;\n  min-width: 350px;\n  z-index: 1;\n  min-height: 200px;\n  position: absolute;\n  margin: 0 auto;\n  -ms-grid-row-align: center;\n      align-self: center;\n  border-radius: 10px;\n  box-shadow: 0 3px 3px 0 rgba(75, 75, 75, 0.5);\n  right: 0;\n  left: 0; }\n  .detailed-container .close_image {\n    position: absolute;\n    right: 0;\n    margin: 5px;\n    width: 7px;\n    height: 7px;\n    background-color: #bbb;\n    border-radius: 50%;\n    border-width: 3px;\n    border-color: #eeeeee;\n    border-style: solid; }\n  .detailed-container .img-container {\n    text-align: center; }\n  .detailed-container .img-container img {\n      margin-top: 20px;\n      text-align: center;\n      height: 100px;\n      width: 100px;\n      left: 100px;\n      -ms-grid-row-align: center;\n          align-self: center;\n      padding: 5px;\n      background: #b6b6b6;\n      border-radius: 50%; }\n  .detailed-container .card-title {\n    font-family: cursive !important;\n    text-align: center;\n    margin-top: 5px;\n    font-size: 17px;\n    margin-bottom: 20px;\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\",\r sans-serif;\n    font-weight: bold;\n    color: beige; }\n  .detailed-container .content-header {\n    display: flex;\n    margin: 4px;\n    margin-left: 9px;\n    font-family: cursive;\n    color: antiquewhite;\n    font-weight: bold; }\n  .detailed-container .content-header img {\n      cursor: pointer;\n      margin-right: 10px;\n      width: 10px;\n      height: 10px; }\n  .detailed-container :last-child {\n    margin-bottom: 15px; }\n"
+module.exports = ".detailed-container {\n  max-width: 500px;\n  min-width: 350px;\n  z-index: 1;\n  min-height: 200px;\n  position: absolute;\n  margin: 0 auto;\n  -ms-grid-row-align: center;\n      align-self: center;\n  border-radius: 10px;\n  box-shadow: 0 3px 3px 0 rgba(75, 75, 75, 0.5);\n  right: 0;\n  left: 0; }\n  .detailed-container .close_image {\n    position: absolute;\n    right: 0;\n    margin: 5px;\n    width: 7px;\n    height: 7px;\n    background-color: #bbb;\n    border-radius: 50%;\n    border-width: 3px;\n    border-color: #eeeeee;\n    border-style: solid; }\n  .detailed-container .img-container {\n    text-align: center; }\n  .detailed-container .img-container img {\n      margin-top: 20px;\n      text-align: center;\n      height: 100px;\n      width: 100px;\n      left: 100px;\n      -ms-grid-row-align: center;\n          align-self: center;\n      padding: 5px;\n      background: #b6b6b6;\n      border-radius: 50%; }\n  .detailed-container .card-title {\n    font-family: cursive !important;\n    text-align: center;\n    margin-top: 5px;\n    font-size: 17px;\n    margin-bottom: 10px;\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\",\r sans-serif;\n    font-weight: bold;\n    color: beige; }\n  .detailed-container .content-header {\n    display: flex;\n    margin: 4px;\n    margin-left: 9px;\n    font-family: cursive;\n    color: antiquewhite;\n    font-weight: bold; }\n  .detailed-container .content-header img {\n      cursor: pointer;\n      margin-right: 10px;\n      width: 10px;\n      height: 10px; }\n  .detailed-container :last-child {\n    margin-bottom: 15px; }\n"
 
 /***/ }),
 
@@ -308,6 +308,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
 /* harmony import */ var _store_selectors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/selectors */ "./src/app/components/detailed-card-view/store/selectors.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -320,18 +321,27 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var DetailedCardViewComponent = /** @class */ (function () {
-    function DetailedCardViewComponent(store) {
+    function DetailedCardViewComponent(store, sanitizer) {
         this.store = store;
+        this.sanitizer = sanitizer;
     }
     DetailedCardViewComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.youtubeurl = this.sanitizer.bypassSecurityTrustResourceUrl("https://youtu.be/N1u9I6UEclo/embed");
         this.store.select(_store_selectors__WEBPACK_IMPORTED_MODULE_2__["getDetailedViewCard"]).subscribe(function (face) {
             if (Object.keys(face).length > 0) {
                 _this.show = true;
                 _this.card = face;
-                _this.highlights = face.content.highlights;
-                _this.description = face.content.description;
+                if (face.content) {
+                    _this.highlights = face.content.highlights;
+                    _this.description = face.content.description;
+                }
+                else {
+                    _this.highlights = [];
+                    _this.description = '';
+                }
             }
         });
     };
@@ -344,7 +354,7 @@ var DetailedCardViewComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./detailed-card-view.component.html */ "./src/app/components/detailed-card-view/detailed-card-view.component.html"),
             styles: [__webpack_require__(/*! ./detailed-card-view.component.scss */ "./src/app/components/detailed-card-view/detailed-card-view.component.scss")]
         }),
-        __metadata("design:paramtypes", [_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["Store"]])
+        __metadata("design:paramtypes", [_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["Store"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"]])
     ], DetailedCardViewComponent);
     return DetailedCardViewComponent;
 }());
@@ -507,7 +517,7 @@ module.exports = "<div class=\"container\">\n  <div class=\"highlights\">\n    <
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container .highlights {\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: auto auto auto auto;\n      grid-template-columns: auto auto auto auto;\n  padding: 10px; }\n\n.container .highlights ::ng-deep .item {\n  margin: auto;\n  align-items: center;\n  display: flex;\n  height: 50px; }\n\n.container .highlights ::ng-deep .item img {\n    text-align: center;\n    height: 20px;\n    width: 20px;\n    -ms-grid-row-align: center;\n        align-self: center;\n    padding: 5px;\n    border-radius: 50%; }\n\n.container .highlights ::ng-deep .item .title {\n    font-size: 12px;\n    font-weight: bold;\n    font-family: cursive !important;\n    color: beige;\n    margin: auto; }\n\n.container .highlights ::ng-deep .item .title div {\n      margin-bottom: 0px; }\n"
+module.exports = ".container .highlights {\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: auto auto auto auto;\n      grid-template-columns: auto auto auto auto;\n  padding: 10px; }\n\n.container .highlights ::ng-deep .item {\n  margin: auto;\n  align-items: center;\n  display: flex;\n  height: 50px; }\n\n.container .highlights ::ng-deep .item img {\n    text-align: center;\n    height: 20px;\n    width: 20px;\n    -ms-grid-row-align: center;\n        align-self: center;\n    padding: 5px;\n    border-radius: 50%; }\n\n.container .highlights ::ng-deep .item .title {\n    font-size: 12px;\n    font-weight: bold;\n    font-family: cursive !important;\n    color: beige;\n    margin: auto; }\n\n.container .highlights ::ng-deep .item .title .key {\n      font-size: 11px; }\n\n.container .highlights ::ng-deep .item .title div {\n      margin-bottom: 0px; }\n\n.container .description {\n  color: beige;\n  margin: 0px 20px 0px 20px; }\n"
 
 /***/ }),
 
@@ -702,7 +712,7 @@ var CARD_FACES = [
                 { title: { key: 'Status', value: 'Married' }, image: 'age icon' },
                 { title: { key: 'Mobile', value: '0523053392' }, image: 'age icon' }
             ],
-            description: ""
+            description: "Hi, this is a short description of my my my mydsf djsdf ksdf afhsdlk fssd fkldf klsdhfk sddfk sdf kds"
         }
     },
     {
