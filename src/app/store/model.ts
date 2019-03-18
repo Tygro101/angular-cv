@@ -1,5 +1,5 @@
-import { Card } from "../models/card-model";
-import { DetailedCardViewModel } from "../components/detailed-card-view/store/state";
+import { Card } from "src/app/models/card-model";
+import { DetailedCardViewModel } from "src/app/components/detailed-card-view/store/state";
 
 
 export interface AppRoot{

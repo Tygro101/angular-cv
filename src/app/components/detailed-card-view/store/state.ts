@@ -9,5 +9,15 @@ export interface DetailedCardViewModel{
 
 
 export interface CardContent extends Partial<Card>{
-    content?: Array<string>;
+    content?: {
+        highlights: Array<Highlight>,
+        description: string;
+        vedios?: Array<string>;
+    }
+}
+
+
+export interface Highlight{
+    image: string;
+    title: {[key: string]: string};
 }

@@ -1,9 +1,9 @@
-import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
-import { Store, select } from '@ngrx/store';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { AppRoot } from 'src/app/store/model';
 import { getDetailedViewCard } from './store/selectors';
-import { Card } from 'src/app/models/card-model';
-import { CardContent } from './store/state';
+import { CardContent, Highlight } from './store/state';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-detailed-component',
@@ -16,14 +16,25 @@ import { CardContent } from './store/state';
 export class DetailedCardViewComponent implements OnInit {
   show: boolean;
   card: CardContent;
+  highlights: Array<Highlight>;
+  description: string;
+  youtubeurl: SafeResourceUrl;
 
-  constructor(private store:Store<AppRoot>) { }
+  constructor(private store:Store<AppRoot>, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    this.store.select(getDetailedViewCard).subscribe((face)=>{
+    this.youtubeurl = this.sanitizer.bypassSecurityTrustResourceUrl("https://youtu.be/N1u9I6UEclo/embed")
+    this.store.select(getDetailedViewCard).subscribe((face: CardContent)=>{
       if(Object.keys(face).length>0){ 
         this.show = true;
         this.card = face;
+        if(face.content){
+        this.highlights = face.content.highlights;
+        this.description = face.content.description;
+        }else{
+          this.highlights = [];
+          this.description = '';
+        }
       }
     })
   }

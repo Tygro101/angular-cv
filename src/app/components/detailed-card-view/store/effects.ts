@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
-import { EMPTY, pipe } from 'rxjs';
-import { map, catchError, filter, mergeMap } from 'rxjs/operators';
+import { map, filter, mergeMap } from 'rxjs/operators';
 import * as DetaildActions from './actions';
 import { CardsDataService } from 'src/app/services/cards-data.service';
 import { CardContent } from 'src/app/components/detailed-card-view/store/state'

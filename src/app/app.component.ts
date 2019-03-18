@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { CardsDataService } from './services/cards-data.service';
-import { Card } from './models/card-model';
+import { Card } from 'src/app/models/card-model';
 import { Store, select } from '@ngrx/store';
 import { AppRoot } from './store/model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import * as DetailedAcations from './components/detailed-card-view/store/actions'
+import * as DetailedAcations from 'src/app/components/detailed-card-view/store/actions'
 
 @Component({
   selector: 'app-root',

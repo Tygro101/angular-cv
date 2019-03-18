@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { CARD_FACES } from 'src/assets/static-data/state';
+import { CARD_FACES } from 'src/app/store/state';
 import { CardContent } from 'src/app/components/detailed-card-view/store/state';
-import { Card } from '../models/card-model';
+import { Card } from 'src/app/models/card-model';
 
 @Injectable({
   providedIn: 'root'

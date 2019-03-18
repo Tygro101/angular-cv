@@ -1,4 +1,4 @@
-import { CARDS } from "src/assets/static-data/state";
+import { CARDS } from "src/app/store/state";
 import { Action } from '@ngrx/store';
 
 

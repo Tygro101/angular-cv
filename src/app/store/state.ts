@@ -58,11 +58,15 @@ export const CARDS: Array<Card> = [
 export const CARD_FACES:Array<CardContent> = [
     { 
         cardId:1,
-        content:[
-            "Name: Ran Tayeb",
-            "Degree: Electrical & Computer Engineer",
-            "Age: 31",
-        ]
+        content:{
+            highlights:[
+                { title: {key:'Name'    , value:'Ran Tayeb'}, image: 'Name icon'},    
+                { title: {key:'Email'   , value:'tayebran@gmail.com'}, image: 'age icon'},
+                { title: {key:'Status'  , value:'Married'}, image: 'age icon'},
+                { title: {key:'Mobile'   , value:'0523053392'}, image: 'age icon'}  
+            ],
+            description:"Hi, this is a short description of my my my mydsf djsdf ksdf afhsdlk fssd fkldf klsdhfk sddfk sdf kds"
+        }
     },
     { 
         cardId:2,

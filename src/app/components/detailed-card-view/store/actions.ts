@@ -1,4 +1,4 @@
-import { DetailedCardViewModel, CardContent } from "./state";
+import { CardContent } from "./state";
 import { Action } from '@ngrx/store';
 import { Card } from "src/app/models/card-model";
 

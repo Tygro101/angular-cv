@@ -4,19 +4,20 @@ import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 import { DetailedCardViewComponent } from './components/detailed-card-view/detailed-card-view.component';
 import { CardComponent } from './components/card/card.component';
-import { composeWithDevTools } from 'redux-devtools-extension';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import root from './store/reducers';
+import  root  from 'src/app/store/reducers';
 import { environment } from 'src/environments/environment';
 import { EffectsModule } from '@ngrx/effects';
-import { DetailedViewEffects } from './components/detailed-card-view/store/effects'
+import { DetailedViewEffects } from './components/detailed-card-view/store/effects';
+import { DetailedContentComponent } from 'src/app/components/detailed-content/detailed-content.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailedCardViewComponent,
-    CardComponent
+    CardComponent,
+    DetailedContentComponent
   ],
   imports: [
     BrowserModule,
