@@ -792,7 +792,7 @@ var CARDS = [
     {
         cardId: 1,
         cardTitle: "Personal Info",
-        cardImage: "https://i.pinimg.com/564x/4b/b2/99/4bb29980c0872588bee4008974dc5578.jpg",
+        cardImage: "assets/img/profile.jpg",
         cardBackgrowndPrimary: "#607d8b",
         cardBackgrowndPrimaryLight: "#8eacbb",
         cardBackgrowndPrimaryDark: "#34515e",
@@ -808,7 +808,7 @@ var CARDS = [
     {
         cardId: 3,
         cardTitle: "Android",
-        cardImage: "https://i.pinimg.com/originals/74/64/22/74642234d90c3ec9d8020f5d02a4a701.png",
+        cardImage: "assets/img/android.png",
         cardBackgrowndPrimary: "#43a047",
         cardBackgrowndPrimaryLight: "#00701a",
         cardBackgrowndPrimaryDark: "#ff6f60"
@@ -816,7 +816,7 @@ var CARDS = [
     {
         cardId: 3,
         cardTitle: "Unity",
-        cardImage: "https://i.pinimg.com/originals/82/d9/85/82d985080cb3295931db2efcd35d37fc.png",
+        cardImage: "assets/img/unity_3d.png",
         cardBackgrowndPrimary: "#757575",
         cardBackgrowndPrimaryLight: "#a4a4a4",
         cardBackgrowndPrimaryDark: "#494949"
@@ -824,7 +824,7 @@ var CARDS = [
     {
         cardId: 4,
         cardTitle: "Node.js",
-        cardImage: "https://i.pinimg.com/originals/81/21/1c/81211c6b6119814f72fb2189a9abd42b.png",
+        cardImage: "assets/img/nodejs.png",
         cardBackgrowndPrimary: "#7cb342",
         cardBackgrowndPrimaryLight: "#aee571",
         cardBackgrowndPrimaryDark: "#4b830d"
@@ -832,7 +832,7 @@ var CARDS = [
     {
         cardId: 5,
         cardTitle: "Academic degree",
-        cardImage: "https://i.pinimg.com/originals/ed/84/0e/ed840e7d19dd4450f1ff990f878ef5a0.png",
+        cardImage: "assets/img/university.png",
         cardBackgrowndPrimary: "#6d4c41",
         cardBackgrowndPrimaryLight: "#9c786c",
         cardBackgrowndPrimaryDark: "#40241a"
