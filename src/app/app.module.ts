@@ -9,7 +9,9 @@ import  root  from 'src/app/store/reducers';
 import { environment } from 'src/environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { DetailedViewEffects } from './components/detailed-card-view/store/effects';
-import { DetailedContentComponent } from 'src/app/components/detailed-content/detailed-content.component'
+import { DetailedContentComponent } from 'src/app/components/detailed-content/detailed-content.component';
+import { AppViewComponent } from './app-view/app-view.component';
+import { HighlightComponent } from './highlight/highlight.component'
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { DetailedContentComponent } from 'src/app/components/detailed-content/de
     AppComponent,
     DetailedCardViewComponent,
     CardComponent,
-    DetailedContentComponent
+    DetailedContentComponent,
+    AppViewComponent,
+    HighlightComponent
   ],
   imports: [
     BrowserModule,

@@ -6,11 +6,7 @@
   <div class="card-title">{{card.cardTitle}}</div>
   <detailed-content>
     <div *ngFor='let highlight of highlights' class='item'>
-      <img src="assets/img/angular.png" alt="">
-      <div class="title">
-          <div class="key">{{highlight.title.key}}:</div>
-          <div class="value">{{highlight.title.value}}</div>
-      </div>
+      <highlight [highlight]='highlight'></highlight>
     </div>
     <div class="description">
       {{description}}
