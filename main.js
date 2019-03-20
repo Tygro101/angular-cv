@@ -126,12 +126,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ngrx/effects */ "./node_modules/@ngrx/effects/fesm5/effects.js");
 /* harmony import */ var _components_detailed_card_view_store_effects__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/detailed-card-view/store/effects */ "./src/app/components/detailed-card-view/store/effects.ts");
 /* harmony import */ var src_app_components_detailed_content_detailed_content_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/components/detailed-content/detailed-content.component */ "./src/app/components/detailed-content/detailed-content.component.ts");
+/* harmony import */ var _components_project_view_project_view_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/project-view/project-view.component */ "./src/app/components/project-view/project-view.component.ts");
+/* harmony import */ var _components_highlight_highlight_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/highlight/highlight.component */ "./src/app/components/highlight/highlight.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -153,7 +157,9 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
                 _components_detailed_card_view_detailed_card_view_component__WEBPACK_IMPORTED_MODULE_4__["DetailedCardViewComponent"],
                 _components_card_card_component__WEBPACK_IMPORTED_MODULE_5__["CardComponent"],
-                src_app_components_detailed_content_detailed_content_component__WEBPACK_IMPORTED_MODULE_11__["DetailedContentComponent"]
+                src_app_components_detailed_content_detailed_content_component__WEBPACK_IMPORTED_MODULE_11__["DetailedContentComponent"],
+                _components_project_view_project_view_component__WEBPACK_IMPORTED_MODULE_12__["ProjectViewComponent"],
+                _components_highlight_highlight_component__WEBPACK_IMPORTED_MODULE_13__["HighlightComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -280,7 +286,7 @@ function CardsReducers(state, action) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}\">\r\n  <span (click)=\"close()\" class=\"close_image\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary}\"></span>\r\n  <div class=\"img-container\">\r\n    <img src=\"{{card.cardImage}}\" alt=\"\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }\">\r\n  </div>\r\n  <div class=\"card-title\">{{card.cardTitle}}</div>\r\n  <detailed-content>\r\n    <div *ngFor='let highlight of highlights' class='item'>\r\n      <img src=\"assets/img/angular.png\" alt=\"\">\r\n      <div class=\"title\">\r\n          <div class=\"key\">{{highlight.title.key}}:</div>\r\n          <div class=\"value\">{{highlight.title.value}}</div>\r\n      </div>\r\n    </div>\r\n    <div class=\"description\">\r\n      {{description}}\r\n    </div>\r\n    <iframe width=\"494\" height=\"250\" src=\"https://www.youtube.com/embed/IAhM4t0EuwM\" frameborder=\"0\" allowfullscreen></iframe>\r\n  </detailed-content>\r\n</div>\r\n"
+module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}\">\r\n  <span (click)=\"close()\" class=\"close_image\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary}\"></span>\r\n  <div class=\"img-container\">\r\n    <img src=\"{{card.cardImage}}\" alt=\"\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }\">\r\n  </div>\r\n  <div class=\"card-title\">{{card.cardTitle}}</div>\r\n  <detailed-content>\r\n    <div *ngFor='let highlight of highlights' class='item'>\r\n      <highlight [highlight]='highlight'></highlight>\r\n    </div>\r\n    <div class=\"description\">\r\n      {{description}}\r\n    </div>\r\n    <iframe width=\"494\" height=\"250\" src=\"https://www.youtube.com/embed/IAhM4t0EuwM\" frameborder=\"0\" allowfullscreen></iframe>\r\n  </detailed-content>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -506,7 +512,7 @@ var getDetailedViewCard = function (state) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"content\">\n    <div class=\"highlights\">\n      <ng-content select=\".item\"></ng-content>\n    </div>\n    <div class=\"description\">\n      <ng-content select=\".description\"></ng-content>\n    </div>\n    <div class=\"vedio\">\n      <ng-content select=\"iframe\"></ng-content>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container\" id=\"scrollbar\">\n  <div class=\"content\">\n    <div class=\"highlights\">\n      <ng-content select=\".item\"></ng-content>\n    </div>\n    <div class=\"description\">\n      <div class=\"title\">Short Desctiption</div>\n      <ng-content select=\".description\"></ng-content>\n    </div>\n    <div class=\"vedio\">\n      <ng-content select=\"iframe\"></ng-content>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -517,7 +523,7 @@ module.exports = "<div class=\"container\">\n  <div class=\"content\">\n    <div
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container {\n  overflow: auto;\n  max-height: 350px; }\n  .container .content {\n    height: 100%; }\n  .container .highlights {\n    display: -ms-grid;\n    display: grid;\n    -ms-grid-columns: auto auto auto auto;\n        grid-template-columns: auto auto auto auto;\n    padding: 10px; }\n  .container .highlights ::ng-deep .item {\n    margin: auto;\n    align-items: center;\n    display: flex;\n    height: 50px; }\n  .container .highlights ::ng-deep .item img {\n      text-align: center;\n      height: 20px;\n      width: 20px;\n      -ms-grid-row-align: center;\n          align-self: center;\n      padding: 5px;\n      border-radius: 50%; }\n  .container .highlights ::ng-deep .item .title {\n      font-size: 12px;\n      font-weight: bold;\n      font-family: cursive !important;\n      color: beige;\n      margin: auto; }\n  .container .highlights ::ng-deep .item .title .key {\n        font-size: 11px; }\n  .container .highlights ::ng-deep .item .title div {\n        margin-bottom: 0px; }\n  .container .description {\n    color: beige;\n    margin: 0px 20px 0px 20px; }\n  .container .video {\n    padding-bottom: 0px;\n    margin-bottom: 0px;\n    text-align: center;\n    background: #34515e;\n    padding-top: 15px; }\n"
+module.exports = ".container {\n  overflow-y: auto;\n  overflow-x: hidden;\n  max-height: 300px; }\n  .container .content {\n    height: 100%; }\n  .container .highlights {\n    display: -ms-grid;\n    display: grid;\n    -ms-grid-columns: auto auto auto auto;\n        grid-template-columns: auto auto auto auto;\n    padding: 10px; }\n  .container .highlights ::ng-deep .item {\n    margin: auto;\n    align-items: center;\n    display: flex;\n    height: 50px; }\n  .container .highlights ::ng-deep .item img {\n      text-align: center;\n      height: 20px;\n      width: 20px;\n      -ms-grid-row-align: center;\n          align-self: center;\n      padding: 5px;\n      border-radius: 50%; }\n  .container .highlights ::ng-deep .item .title {\n      font-size: 12px;\n      font-weight: bold;\n      font-family: cursive !important;\n      color: beige;\n      margin: auto; }\n  .container .highlights ::ng-deep .item .title .key {\n        font-size: 11px; }\n  .container .highlights ::ng-deep .item .title div {\n        margin-bottom: 0px; }\n  .container .description {\n    color: beige;\n    margin: 0px 20px 0px 20px; }\n  .container .video {\n    padding-bottom: 0px;\n    margin-bottom: 0px;\n    text-align: center;\n    background: #34515e;\n    padding-top: 15px; }\n  #scrollbar::-webkit-scrollbar-track {\n  border-radius: 10px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar {\n  width: 12px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: beige;\n  padding-right: 1px;\n  background-clip: content-box;\n  /* padding-right: 9px; */\n  border: 3px solid transparent; }\n  #scrollbar::-webkit-scrollbar-thumb:hover {\n  border-radius: 10px;\n  background-color: #fff; }\n  #scrollbar::-webkit-scrollbar-thumb:active {\n  background-color: linear-gradient(left, #22ADD4, #1E98BA); }\n"
 
 /***/ }),
 
@@ -556,6 +562,136 @@ var DetailedContentComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], DetailedContentComponent);
     return DetailedContentComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/highlight/highlight.component.html":
+/*!***************************************************************!*\
+  !*** ./src/app/components/highlight/highlight.component.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"highlight-container\">\n  <img src=\"assets/img/angular.png\" alt=\"\">\n  <div class=\"title\">\n    <div class=\"key\">{{highlight.title.key}}:</div>\n    <div class=\"value\">{{highlight.title.value}}</div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/highlight/highlight.component.scss":
+/*!***************************************************************!*\
+  !*** ./src/app/components/highlight/highlight.component.scss ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".highlight-container {\n  display: flex; }\n"
+
+/***/ }),
+
+/***/ "./src/app/components/highlight/highlight.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/components/highlight/highlight.component.ts ***!
+  \*************************************************************/
+/*! exports provided: HighlightComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HighlightComponent", function() { return HighlightComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var HighlightComponent = /** @class */ (function () {
+    function HighlightComponent() {
+    }
+    HighlightComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], HighlightComponent.prototype, "highlight", void 0);
+    HighlightComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'highlight',
+            template: __webpack_require__(/*! ./highlight.component.html */ "./src/app/components/highlight/highlight.component.html"),
+            styles: [__webpack_require__(/*! ./highlight.component.scss */ "./src/app/components/highlight/highlight.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], HighlightComponent);
+    return HighlightComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/project-view/project-view.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/project-view/project-view.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  app-view works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/project-view/project-view.component.scss":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/project-view/project-view.component.scss ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/project-view/project-view.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/project-view/project-view.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: ProjectViewComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectViewComponent", function() { return ProjectViewComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProjectViewComponent = /** @class */ (function () {
+    function ProjectViewComponent() {
+    }
+    ProjectViewComponent.prototype.ngOnInit = function () {
+    };
+    ProjectViewComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'project-view',
+            template: __webpack_require__(/*! ./project-view.component.html */ "./src/app/components/project-view/project-view.component.html"),
+            styles: [__webpack_require__(/*! ./project-view.component.scss */ "./src/app/components/project-view/project-view.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ProjectViewComponent);
+    return ProjectViewComponent;
 }());
 
 
@@ -664,7 +800,7 @@ var CARDS = [
     {
         cardId: 2,
         cardTitle: "Angular.io",
-        cardImage: "https://i.pinimg.com/originals/1a/63/2d/1a632d2b39f3275752f2c4b3c73477a3.png",
+        cardImage: "assets/img/angular.png",
         cardBackgrowndPrimary: "#e53935",
         cardBackgrowndPrimaryLight: "#ff6f60",
         cardBackgrowndPrimaryDark: "#ab000d"
