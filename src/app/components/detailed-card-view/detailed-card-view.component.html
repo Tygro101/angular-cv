@@ -4,13 +4,17 @@
     <img src="{{card.cardImage}}" alt="" [ngStyle]="{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }">
   </div>
   <div class="card-title">{{card.cardTitle}}</div>
-  <detailed-content>
-    <div *ngFor='let highlight of highlights' class='item'>
-      <highlight [highlight]='highlight'></highlight>
-    </div>
-    <div class="description">
-      {{description}}
-    </div>
-    <iframe width="494" height="250" src="https://www.youtube.com/embed/IAhM4t0EuwM" frameborder="0" allowfullscreen></iframe>
-  </detailed-content>
+  <div class="container"  id="scrollbar">
+    <detailed-content *ngFor='let content of contents'>
+      <div *ngFor='let highlight of content.highlights' class='item'>
+        <highlight [highlight]='highlight'></highlight>
+      </div>
+      <img src="assets/img/android.png" class="proj-img">
+      <div class="description" *ngIf='content.description'>
+        {{content.description}}
+      </div>
+      <iframe width="494" height="250" src="https://www.youtube.com/embed/IAhM4t0EuwM" frameborder="0" allowfullscreen></iframe>
+    </detailed-content>
+  </div>
+
 </div>

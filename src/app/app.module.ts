@@ -10,8 +10,8 @@ import { environment } from 'src/environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { DetailedViewEffects } from './components/detailed-card-view/store/effects';
 import { DetailedContentComponent } from 'src/app/components/detailed-content/detailed-content.component';
-import { AppViewComponent } from './app-view/app-view.component';
-import { HighlightComponent } from './highlight/highlight.component'
+import { ProjectViewComponent } from './components/project-view/project-view.component';
+import { HighlightComponent } from './components/highlight/highlight.component'
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { HighlightComponent } from './highlight/highlight.component'
     DetailedCardViewComponent,
     CardComponent,
     DetailedContentComponent,
-    AppViewComponent,
+    ProjectViewComponent,
     HighlightComponent
   ],
   imports: [

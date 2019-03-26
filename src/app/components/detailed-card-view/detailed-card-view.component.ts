@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppRoot } from 'src/app/store/model';
 import { getDetailedViewCard } from './store/selectors';
-import { CardContent, Highlight } from './store/state';
+import { CardContent, Highlight, Content } from './store/state';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
@@ -19,6 +19,7 @@ export class DetailedCardViewComponent implements OnInit {
   highlights: Array<Highlight>;
   description: string;
   youtubeurl: SafeResourceUrl;
+  contents: Array<Content>;
 
   constructor(private store:Store<AppRoot>, private sanitizer: DomSanitizer) { }
 
@@ -28,12 +29,14 @@ export class DetailedCardViewComponent implements OnInit {
       if(Object.keys(face).length>0){ 
         this.show = true;
         this.card = face;
-        if(face.content){
-        this.highlights = face.content.highlights;
-        this.description = face.content.description;
+        if(face.content && face.content.length>0){
+          this.contents = face.content;
+        //this.highlights = face.content[0].highlights;
+        //this.description = face.content[0].description;
         }else{
-          this.highlights = [];
-          this.description = '';
+          this.contents = [];
+          //this.highlights = [];
+          //this.description = '';
         }
       }
     })
