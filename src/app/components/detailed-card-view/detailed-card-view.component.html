@@ -13,7 +13,8 @@
       <div class="description" *ngIf='content.description'>
         {{content.description}}
       </div>
-      <iframe width="494" height="250" src="https://www.youtube.com/embed/IAhM4t0EuwM" frameborder="0" allowfullscreen></iframe>
+      <iframe width="494" height="250" [src]='getUrl(content) | safeUrl' frameborder="0" allowfullscreen>
+      </iframe>
     </detailed-content>
   </div>
 

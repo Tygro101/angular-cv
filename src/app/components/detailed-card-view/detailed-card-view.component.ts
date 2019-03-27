@@ -16,27 +16,20 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class DetailedCardViewComponent implements OnInit {
   show: boolean;
   card: CardContent;
-  highlights: Array<Highlight>;
-  description: string;
-  youtubeurl: SafeResourceUrl;
   contents: Array<Content>;
+  url: string;
 
-  constructor(private store:Store<AppRoot>, private sanitizer: DomSanitizer) { }
+  constructor(private store:Store<AppRoot>) { }
 
   ngOnInit() {
-    this.youtubeurl = this.sanitizer.bypassSecurityTrustResourceUrl("https://youtu.be/N1u9I6UEclo/embed")
     this.store.select(getDetailedViewCard).subscribe((face: CardContent)=>{
       if(Object.keys(face).length>0){ 
         this.show = true;
         this.card = face;
         if(face.content && face.content.length>0){
           this.contents = face.content;
-        //this.highlights = face.content[0].highlights;
-        //this.description = face.content[0].description;
         }else{
           this.contents = [];
-          //this.highlights = [];
-          //this.description = '';
         }
       }
     })
@@ -44,5 +37,9 @@ export class DetailedCardViewComponent implements OnInit {
 
   close(): void{
     this.show = false;
+  }
+
+  getUrl(content: Content):string{
+    return content.video;
   }
 }

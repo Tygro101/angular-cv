@@ -65,7 +65,8 @@ export const CARD_FACES:Array<CardContent> = [
                 { title: {key:'Status'  , value:'Married'}, image: 'age icon'},
                 { title: {key:'Mobile'   , value:'0523053392'}, image: 'age icon'}  
             ],
-            description:"Hi, this is a short description of my my my mydsf djsdf ksdf afhsdlk fssd fkldf klsdhfk sddfk sdf kds"
+            description:"Hi, this is a short description of my my my mydsf djsdf ksdf afhsdlk fssd fkldf klsdhfk sddfk sdf kds",
+            video:"https://www.youtube.com/embed/IAhM4t0EuwM"
         },
         {
             highlights:[
@@ -74,7 +75,10 @@ export const CARD_FACES:Array<CardContent> = [
                 { title: {key:'Status'  , value:'Married'}, image: 'age icon'},
                 { title: {key:'Mobile'   , value:'0523053392'}, image: 'age icon'}  
             ],
-            description:"Hi, this is a short description of my my my mydsf djsdf ksdf afhsdlk fssd fkldf klsdhfk sddfk sdf kds"
+            description:`Hi, this is a short description 
+            of my my my mydsf djsdf ksdf afhsdlk fssd 
+            fkldf klsdhfk sddfk sdf kds`,
+            video:"https://www.youtube.com/embed/IAhM4t0EuwM"
         }]
     },
     { 

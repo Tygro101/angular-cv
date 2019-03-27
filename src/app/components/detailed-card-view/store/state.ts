@@ -16,7 +16,7 @@ export interface CardContent extends Partial<Card>{
 export interface Content{
     highlights: Array<Highlight>,
     description: string;
-    videos?: Array<string>;
+    video?: string;
 }
 
 
@@ -25,7 +25,3 @@ export interface Highlight{
     title: {[key: string]: string};
 }
 
-export interface Video{
-    title: string;
-    url: string;
-}
