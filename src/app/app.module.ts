@@ -12,7 +12,8 @@ import { DetailedViewEffects } from './components/detailed-card-view/store/effec
 import { DetailedContentComponent } from 'src/app/components/detailed-content/detailed-content.component';
 import { ProjectViewComponent } from './components/project-view/project-view.component';
 import { HighlightComponent } from './components/highlight/highlight.component';
-import { SafeUrlPipe } from './pipes/safe-url.pipe'
+import { SafeUrlPipe } from './pipes/safe-url.pipe';
+import { DescriptionComponent } from './components/description/description.component'
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SafeUrlPipe } from './pipes/safe-url.pipe'
     DetailedContentComponent,
     ProjectViewComponent,
     HighlightComponent,
-    SafeUrlPipe
+    SafeUrlPipe,
+    DescriptionComponent
   ],
   imports: [
     BrowserModule,

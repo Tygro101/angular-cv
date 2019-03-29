@@ -14,6 +14,7 @@ export interface CardContent extends Partial<Card>{
 }
 
 export interface Content{
+    highlightsIcon?: string;
     highlights: Array<Highlight>,
     description: string;
     video?: string;
@@ -21,7 +22,7 @@ export interface Content{
 
 
 export interface Highlight{
-    image: string;
+    img: string;
     title: {[key: string]: string};
 }
 

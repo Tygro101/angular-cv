@@ -54,6 +54,15 @@
     }
   }
 
+  .title {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: cursive !important;
+    color: beige;
+    margin: auto;
+    margin-bottom: 5px;
+  }
+
   .description {
     width: 100%;
     color: beige;
@@ -61,11 +70,7 @@
   }
 
   .video {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
     text-align: center;
-    background: rgb(52, 81, 94);
-    padding-top: 15px;
   }
 
 

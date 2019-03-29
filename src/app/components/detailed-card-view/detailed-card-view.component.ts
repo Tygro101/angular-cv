@@ -39,7 +39,4 @@ export class DetailedCardViewComponent implements OnInit {
     this.show = false;
   }
 
-  getUrl(content: Content):string{
-    return content.video;
-  }
 }

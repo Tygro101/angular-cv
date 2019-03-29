@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Highlight } from '../detailed-card-view/store/state';
+import { ImageResolverService } from 'src/app/services/image-resolver.service';
 
 @Component({
   selector: 'highlight',
@@ -8,9 +9,11 @@ import { Highlight } from '../detailed-card-view/store/state';
 })
 export class HighlightComponent implements OnInit {
   @Input() highlight: Highlight;
-  constructor() { }
+  img: string;
+  constructor(private imageResolver: ImageResolverService) { }
 
   ngOnInit() {
+    this.img = this.imageResolver.resolveImg(this.highlight.img);
   }
 
 }

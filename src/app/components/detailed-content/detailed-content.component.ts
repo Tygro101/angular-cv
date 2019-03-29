@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Content } from '../detailed-card-view/store/state';
 
 @Component({
   selector: 'detailed-content',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailedContentComponent implements OnInit {
 
+  @Input() content:Content;
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }
