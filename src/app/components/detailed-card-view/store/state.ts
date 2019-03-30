@@ -14,6 +14,7 @@ export interface CardContent extends Partial<Card>{
 }
 
 export interface Content{
+    projectTitle?: string;
     highlightsIcon?: string;
     highlights: Array<Highlight>,
     description: string;

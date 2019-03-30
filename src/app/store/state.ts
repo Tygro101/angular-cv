@@ -62,11 +62,12 @@ export const CARD_FACES:Array<CardContent> = [
             highlights:[
                 { title: {key:'Name'    , value:'Ran Tayeb'}, img: 'Name'},    
                 { title: {key:'Email'   , value:'tayebran@gmail.com'}, img: 'Email'},
-                { title: {key:'Status'  , value:'Married'}, img: 'age icon'},
-                { title: {key:'Mobile'   , value:'0523053392'}, img: 'age icon'}  
+                { title: {key:'Status'  , value:'Married'}, img: 'Status'},
+                { title: {key:'Mobile'   , value:'0523053392'}, img: 'Phone'}  
             ],
+            
             description:"Hi to you all, and this is a short discription that i should fill up",
-            video:"https://www.youtube.com/embed/IAhM4t0EuwM"
+            //video:"https://www.youtube.com/embed/IAhM4t0EuwM"
         }]
     },
     { 
@@ -78,8 +79,8 @@ export const CARD_FACES:Array<CardContent> = [
                 { title: {key:'Status'  , value:'Married'}, img: 'age icon'},
                 { title: {key:'Mobile'   , value:'0523053392'}, img: 'age icon'}  
             ],
+            projectTitle:"Minesweeper",
             description:"This <a href='https://tygro101.github.io//minesweeper-angular/'>Project</a is Minesweeper game made with angular 2",
-            video:"https://www.youtube.com/embed/IAhM4t0EuwM"
         }]
     },
     { 

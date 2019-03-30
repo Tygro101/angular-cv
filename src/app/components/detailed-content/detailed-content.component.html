@@ -1,5 +1,8 @@
 <div class="container">
   <div class="content">
+    <div class="proj title">
+      <ng-content select=".project-title"></ng-content>
+    </div>
     <div style="display: flex">
       <div class="image" *ngIf='content.highlightsIcon'>
         <ng-content select=".proj-img"></ng-content>
