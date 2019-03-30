@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n  background: url(https://cdn.arstechnica.net/wp-content/uploads/2016/10/sierra.jpg);\n  background-size: cover;\n  font-family: 'Roboto', sans-serif;\n  font-size: 14px;\n  letter-spacing: 1px; }\n"
+module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n  background: url(https://cdn.arstechnica.net/wp-content/uploads/2016/10/sierra.jpg);\n  background-size: cover;\n  font-family: 'Roboto', sans-serif;\n  font-size: 14px;\n  letter-spacing: 0.5px; }\n"
 
 /***/ }),
 

@@ -128,12 +128,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_components_detailed_content_detailed_content_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/components/detailed-content/detailed-content.component */ "./src/app/components/detailed-content/detailed-content.component.ts");
 /* harmony import */ var _components_project_view_project_view_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/project-view/project-view.component */ "./src/app/components/project-view/project-view.component.ts");
 /* harmony import */ var _components_highlight_highlight_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/highlight/highlight.component */ "./src/app/components/highlight/highlight.component.ts");
+/* harmony import */ var _pipes_safe_url_pipe__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pipes/safe-url.pipe */ "./src/app/pipes/safe-url.pipe.ts");
+/* harmony import */ var _components_description_description_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/description/description.component */ "./src/app/components/description/description.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -159,7 +163,9 @@ var AppModule = /** @class */ (function () {
                 _components_card_card_component__WEBPACK_IMPORTED_MODULE_5__["CardComponent"],
                 src_app_components_detailed_content_detailed_content_component__WEBPACK_IMPORTED_MODULE_11__["DetailedContentComponent"],
                 _components_project_view_project_view_component__WEBPACK_IMPORTED_MODULE_12__["ProjectViewComponent"],
-                _components_highlight_highlight_component__WEBPACK_IMPORTED_MODULE_13__["HighlightComponent"]
+                _components_highlight_highlight_component__WEBPACK_IMPORTED_MODULE_13__["HighlightComponent"],
+                _pipes_safe_url_pipe__WEBPACK_IMPORTED_MODULE_14__["SafeUrlPipe"],
+                _components_description_description_component__WEBPACK_IMPORTED_MODULE_15__["DescriptionComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -279,6 +285,73 @@ function CardsReducers(state, action) {
 
 /***/ }),
 
+/***/ "./src/app/components/description/description.component.html":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/description/description.component.html ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"content\" [innerHTML]=\"description\">\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/description/description.component.scss":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/description/description.component.scss ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".content {\n  margin-right: 20px;\n  margin-bottom: 5px; }\n"
+
+/***/ }),
+
+/***/ "./src/app/components/description/description.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/description/description.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: DescriptionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DescriptionComponent", function() { return DescriptionComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DescriptionComponent = /** @class */ (function () {
+    function DescriptionComponent() {
+    }
+    DescriptionComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], DescriptionComponent.prototype, "description", void 0);
+    DescriptionComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'description',
+            template: __webpack_require__(/*! ./description.component.html */ "./src/app/components/description/description.component.html"),
+            styles: [__webpack_require__(/*! ./description.component.scss */ "./src/app/components/description/description.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], DescriptionComponent);
+    return DescriptionComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/detailed-card-view/detailed-card-view.component.html":
 /*!*********************************************************************************!*\
   !*** ./src/app/components/detailed-card-view/detailed-card-view.component.html ***!
@@ -286,7 +359,7 @@ function CardsReducers(state, action) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}\">\r\n  <span (click)=\"close()\" class=\"close_image\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary}\"></span>\r\n  <div class=\"img-container\">\r\n    <img src=\"{{card.cardImage}}\" alt=\"\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }\">\r\n  </div>\r\n  <div class=\"card-title\">{{card.cardTitle}}</div>\r\n  <detailed-content>\r\n    <div *ngFor='let highlight of highlights' class='item'>\r\n      <highlight [highlight]='highlight'></highlight>\r\n    </div>\r\n    <div class=\"description\">\r\n      {{description}}\r\n    </div>\r\n    <iframe width=\"494\" height=\"250\" src=\"https://www.youtube.com/embed/IAhM4t0EuwM\" frameborder=\"0\" allowfullscreen></iframe>\r\n  </detailed-content>\r\n</div>\r\n"
+module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}\">\r\n  <span (click)=\"close()\" class=\"close_image\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary}\"></span>\r\n  <div class=\"img-container\">\r\n    <img src=\"{{card.cardImage}}\" alt=\"\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }\">\r\n  </div>\r\n  <div class=\"card-title\">{{card.cardTitle}}</div>\r\n  <div class=\"container\"  id=\"scrollbar\">\r\n    <detailed-content *ngFor='let content of contents' [content]='content'>\r\n      <div class=\"project-title\">{{content.projectTitle}}</div>\r\n      <div *ngFor='let highlight of content.highlights' class='item'>\r\n        <highlight [highlight]='highlight'></highlight>\r\n      </div>\r\n      <img src=\"content.highlightsIcon\" class=\"proj-img\">\r\n      <description class=\"description\" [description]='content.description'></description>\r\n      <iframe *ngIf='content.video' width=\"480\" height=\"242\" [src]='content.video | safeUrl' frameborder=\"0\" allowfullscreen>\r\n      </iframe>\r\n    </detailed-content>\r\n  </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -297,7 +370,7 @@ module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ '
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".detailed-container {\n  max-width: 500px;\n  min-width: 350px;\n  z-index: 1;\n  min-height: 200px;\n  position: absolute;\n  margin: 0 auto;\n  -ms-grid-row-align: center;\n      align-self: center;\n  border-radius: 10px;\n  box-shadow: 0 3px 3px 0 rgba(75, 75, 75, 0.5);\n  right: 0;\n  left: 0; }\n  .detailed-container .close_image {\n    position: absolute;\n    right: 0;\n    margin: 5px;\n    width: 7px;\n    height: 7px;\n    background-color: #bbb;\n    border-radius: 50%;\n    border-width: 3px;\n    border-color: #eeeeee;\n    border-style: solid; }\n  .detailed-container .img-container {\n    text-align: center; }\n  .detailed-container .img-container img {\n      margin-top: 20px;\n      text-align: center;\n      height: 100px;\n      width: 100px;\n      left: 100px;\n      -ms-grid-row-align: center;\n          align-self: center;\n      padding: 5px;\n      background: #b6b6b6;\n      border-radius: 50%; }\n  .detailed-container .card-title {\n    font-family: cursive !important;\n    text-align: center;\n    margin-top: 5px;\n    font-size: 17px;\n    margin-bottom: 10px;\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\",\r sans-serif;\n    font-weight: bold;\n    color: beige; }\n  .detailed-container .content-header {\n    display: flex;\n    margin: 4px;\n    margin-left: 9px;\n    font-family: cursive;\n    color: antiquewhite;\n    font-weight: bold; }\n  .detailed-container .content-header img {\n      cursor: pointer;\n      margin-right: 10px;\n      width: 10px;\n      height: 10px; }\n  .detailed-container :last-child {\n    margin-bottom: 15px; }\n"
+module.exports = ".container {\n  overflow-y: auto;\n  overflow-x: hidden;\n  max-height: 300px; }\n\n.detailed-container {\n  max-width: 500px;\n  min-width: 350px;\n  z-index: 1;\n  min-height: 200px;\n  position: absolute;\n  margin: 0 auto;\n  -ms-grid-row-align: center;\n      align-self: center;\n  border-radius: 10px;\n  box-shadow: 0 3px 3px 0 rgba(75, 75, 75, 0.5);\n  right: 0;\n  left: 0; }\n\n.detailed-container .close_image {\n    position: absolute;\n    right: 0;\n    margin: 5px;\n    width: 7px;\n    height: 7px;\n    background-color: #bbb;\n    border-radius: 50%;\n    border-width: 3px;\n    border-color: #eeeeee;\n    border-style: solid; }\n\n.detailed-container .img-container {\n    text-align: center; }\n\n.detailed-container .img-container img {\n      margin-top: 20px;\n      text-align: center;\n      height: 100px;\n      width: 100px;\n      left: 100px;\n      -ms-grid-row-align: center;\n          align-self: center;\n      padding: 5px;\n      background: #b6b6b6;\n      border-radius: 50%; }\n\n.detailed-container .card-title {\n    font-family: cursive !important;\n    text-align: center;\n    margin-top: 5px;\n    font-size: 17px;\n    margin-bottom: 10px;\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\",\r sans-serif;\n    font-weight: bold;\n    color: beige; }\n\n.detailed-container .content-header {\n    display: flex;\n    margin: 4px;\n    margin-left: 9px;\n    font-family: cursive;\n    color: antiquewhite;\n    font-weight: bold; }\n\n.detailed-container .content-header img {\n      cursor: pointer;\n      margin-right: 10px;\n      width: 10px;\n      height: 10px; }\n\n#scrollbar::-webkit-scrollbar-track {\n  border-radius: 10px;\n  background-color: transparent; }\n\n#scrollbar::-webkit-scrollbar {\n  width: 12px;\n  background-color: transparent; }\n\n#scrollbar::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: beige;\n  padding-right: 1px;\n  background-clip: content-box;\n  /* padding-right: 9px; */\n  border: 3px solid transparent; }\n\n#scrollbar::-webkit-scrollbar-thumb:hover {\n  border-radius: 10px;\n  background-color: #fff; }\n\n#scrollbar::-webkit-scrollbar-thumb:active {\n  background-color: linear-gradient(left, #22ADD4, #1E98BA); }\n"
 
 /***/ }),
 
@@ -314,7 +387,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
 /* harmony import */ var _store_selectors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/selectors */ "./src/app/components/detailed-card-view/store/selectors.ts");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -327,26 +399,21 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var DetailedCardViewComponent = /** @class */ (function () {
-    function DetailedCardViewComponent(store, sanitizer) {
+    function DetailedCardViewComponent(store) {
         this.store = store;
-        this.sanitizer = sanitizer;
     }
     DetailedCardViewComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.youtubeurl = this.sanitizer.bypassSecurityTrustResourceUrl("https://youtu.be/N1u9I6UEclo/embed");
         this.store.select(_store_selectors__WEBPACK_IMPORTED_MODULE_2__["getDetailedViewCard"]).subscribe(function (face) {
             if (Object.keys(face).length > 0) {
                 _this.show = true;
                 _this.card = face;
-                if (face.content) {
-                    _this.highlights = face.content.highlights;
-                    _this.description = face.content.description;
+                if (face.content && face.content.length > 0) {
+                    _this.contents = face.content;
                 }
                 else {
-                    _this.highlights = [];
-                    _this.description = '';
+                    _this.contents = [];
                 }
             }
         });
@@ -360,7 +427,7 @@ var DetailedCardViewComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./detailed-card-view.component.html */ "./src/app/components/detailed-card-view/detailed-card-view.component.html"),
             styles: [__webpack_require__(/*! ./detailed-card-view.component.scss */ "./src/app/components/detailed-card-view/detailed-card-view.component.scss")]
         }),
-        __metadata("design:paramtypes", [_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["Store"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"]])
+        __metadata("design:paramtypes", [_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["Store"]])
     ], DetailedCardViewComponent);
     return DetailedCardViewComponent;
 }());
@@ -512,7 +579,7 @@ var getDetailedViewCard = function (state) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" id=\"scrollbar\">\n  <div class=\"content\">\n    <div class=\"highlights\">\n      <ng-content select=\".item\"></ng-content>\n    </div>\n    <div class=\"description\">\n      <div class=\"title\">Short Desctiption</div>\n      <ng-content select=\".description\"></ng-content>\n    </div>\n    <div class=\"vedio\">\n      <ng-content select=\"iframe\"></ng-content>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <div class=\"content\">\n    <div class=\"proj title\">\n      <ng-content select=\".project-title\"></ng-content>\n    </div>\n    <div style=\"display: flex\">\n      <div class=\"image\" *ngIf='content.highlightsIcon'>\n        <ng-content select=\".proj-img\"></ng-content>\n      </div>\n      <div class=\"highlights\">\n        <ng-content select=\".item\"></ng-content>\n      </div>\n    </div>\n\n    <div class=\"description\">\n      <div class=\"title\">Short Desctiption</div>\n      <ng-content select=\".description\"></ng-content>\n    </div>\n    <div class=\"video\">\n      <ng-content select=\"iframe\"></ng-content>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -523,7 +590,7 @@ module.exports = "<div class=\"container\" id=\"scrollbar\">\n  <div class=\"con
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container {\n  overflow-y: auto;\n  overflow-x: hidden;\n  max-height: 300px; }\n  .container .content {\n    height: 100%; }\n  .container .highlights {\n    display: -ms-grid;\n    display: grid;\n    -ms-grid-columns: auto auto auto auto;\n        grid-template-columns: auto auto auto auto;\n    padding: 10px; }\n  .container .highlights ::ng-deep .item {\n    margin: auto;\n    align-items: center;\n    display: flex;\n    height: 50px; }\n  .container .highlights ::ng-deep .item img {\n      text-align: center;\n      height: 20px;\n      width: 20px;\n      -ms-grid-row-align: center;\n          align-self: center;\n      padding: 5px;\n      border-radius: 50%; }\n  .container .highlights ::ng-deep .item .title {\n      font-size: 12px;\n      font-weight: bold;\n      font-family: cursive !important;\n      color: beige;\n      margin: auto; }\n  .container .highlights ::ng-deep .item .title .key {\n        font-size: 11px; }\n  .container .highlights ::ng-deep .item .title div {\n        margin-bottom: 0px; }\n  .container .description {\n    color: beige;\n    margin: 0px 20px 0px 20px; }\n  .container .video {\n    padding-bottom: 0px;\n    margin-bottom: 0px;\n    text-align: center;\n    background: #34515e;\n    padding-top: 15px; }\n  #scrollbar::-webkit-scrollbar-track {\n  border-radius: 10px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar {\n  width: 12px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: beige;\n  padding-right: 1px;\n  background-clip: content-box;\n  /* padding-right: 9px; */\n  border: 3px solid transparent; }\n  #scrollbar::-webkit-scrollbar-thumb:hover {\n  border-radius: 10px;\n  background-color: #fff; }\n  #scrollbar::-webkit-scrollbar-thumb:active {\n  background-color: linear-gradient(left, #22ADD4, #1E98BA); }\n"
+module.exports = ".content {\n  height: 100%; }\n\n.proj {\n  padding: 10px;\n  font-size: 20px; }\n\n.image {\n  width: 50px;\n  height: 50px;\n  margin: auto;\n  padding: 5px;\n  border-radius: 50%;\n  border: 1px solid  beige;\n  margin-left: 10px; }\n\n.image ::ng-deep img {\n    width: 50px; }\n\n.highlights {\n  display: -ms-grid;\n  display: grid;\n  width: 100%;\n  grid-auto-columns: auto;\n  grid-template-columns: repeat(auto-fill, minmax(auto, 100px));\n  padding: 0px 10px 10px 10px; }\n\n.highlights ::ng-deep .item {\n  margin: auto;\n  align-items: center;\n  display: flex;\n  height: 50px;\n  width: 100%; }\n\n.highlights ::ng-deep .item img {\n    text-align: center;\n    height: 20px;\n    width: 20px;\n    -ms-grid-row-align: center;\n        align-self: center;\n    padding: 5px;\n    border-radius: 50%; }\n\n.highlights ::ng-deep .item .title {\n    font-size: 12px;\n    font-weight: bold;\n    font-family: cursive !important;\n    color: beige;\n    margin: auto; }\n\n.highlights ::ng-deep .item .title .key {\n      font-size: 11px; }\n\n.highlights ::ng-deep .item .title div {\n      margin-bottom: 0px; }\n\n.title {\n  font-size: 14px;\n  font-weight: bold;\n  font-family: cursive !important;\n  color: beige;\n  margin: auto;\n  margin-bottom: 5px; }\n\n.proj {\n  margin-left: 10px; }\n\n.description {\n  width: 100%;\n  color: beige;\n  margin: 0px 20px 0px 20px; }\n\n.video {\n  text-align: center; }\n"
 
 /***/ }),
 
@@ -553,6 +620,10 @@ var DetailedContentComponent = /** @class */ (function () {
     }
     DetailedContentComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], DetailedContentComponent.prototype, "content", void 0);
     DetailedContentComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'detailed-content',
@@ -575,7 +646,7 @@ var DetailedContentComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"highlight-container\">\n  <img src=\"assets/img/angular.png\" alt=\"\">\n  <div class=\"title\">\n    <div class=\"key\">{{highlight.title.key}}:</div>\n    <div class=\"value\">{{highlight.title.value}}</div>\n  </div>\n</div>"
+module.exports = "<div class=\"highlight-container\">\n  <img [src]=\"img\" alt=\"\">\n  <div class=\"title\">\n    <div class=\"key\">{{highlight.title.key}}:</div>\n    <div class=\"value\">{{highlight.title.value}}</div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -601,6 +672,7 @@ module.exports = ".highlight-container {\n  display: flex; }\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HighlightComponent", function() { return HighlightComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_image_resolver_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/image-resolver.service */ "./src/app/services/image-resolver.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -611,10 +683,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var HighlightComponent = /** @class */ (function () {
-    function HighlightComponent() {
+    function HighlightComponent(imageResolver) {
+        this.imageResolver = imageResolver;
     }
     HighlightComponent.prototype.ngOnInit = function () {
+        this.img = this.imageResolver.resolveImg(this.highlight.img);
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -626,7 +701,7 @@ var HighlightComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./highlight.component.html */ "./src/app/components/highlight/highlight.component.html"),
             styles: [__webpack_require__(/*! ./highlight.component.scss */ "./src/app/components/highlight/highlight.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [src_app_services_image_resolver_service__WEBPACK_IMPORTED_MODULE_1__["ImageResolverService"]])
     ], HighlightComponent);
     return HighlightComponent;
 }());
@@ -698,6 +773,49 @@ var ProjectViewComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pipes/safe-url.pipe.ts":
+/*!****************************************!*\
+  !*** ./src/app/pipes/safe-url.pipe.ts ***!
+  \****************************************/
+/*! exports provided: SafeUrlPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SafeUrlPipe", function() { return SafeUrlPipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SafeUrlPipe = /** @class */ (function () {
+    function SafeUrlPipe(sanitizer) {
+        this.sanitizer = sanitizer;
+    }
+    SafeUrlPipe.prototype.transform = function (value, args) {
+        return this.sanitizer.bypassSecurityTrustResourceUrl(value);
+    };
+    SafeUrlPipe = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({
+            name: 'safeUrl'
+        }),
+        __metadata("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"]])
+    ], SafeUrlPipe);
+    return SafeUrlPipe;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/cards-data.service.ts":
 /*!************************************************!*\
   !*** ./src/app/services/cards-data.service.ts ***!
@@ -746,6 +864,51 @@ var CardsDataService = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], CardsDataService);
     return CardsDataService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/image-resolver.service.ts":
+/*!****************************************************!*\
+  !*** ./src/app/services/image-resolver.service.ts ***!
+  \****************************************************/
+/*! exports provided: ImageResolverService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImageResolverService", function() { return ImageResolverService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ImageResolverService = /** @class */ (function () {
+    function ImageResolverService() {
+        this.images = {};
+        this.images["Name"] = "assets/img/highlights/name.svg";
+        this.images["Email"] = "assets/img/highlights/email.svg";
+        this.images["Status"] = "assets/img/highlights/status.svg";
+        this.images["Phone"] = "assets/img/highlights/phone.svg";
+    }
+    ImageResolverService.prototype.resolveImg = function (key) {
+        return this.images[key];
+    };
+    ImageResolverService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], ImageResolverService);
+    return ImageResolverService;
 }());
 
 
@@ -841,18 +1004,28 @@ var CARDS = [
 var CARD_FACES = [
     {
         cardId: 1,
-        content: {
-            highlights: [
-                { title: { key: 'Name', value: 'Ran Tayeb' }, image: 'Name icon' },
-                { title: { key: 'Email', value: 'tayebran@gmail.com' }, image: 'age icon' },
-                { title: { key: 'Status', value: 'Married' }, image: 'age icon' },
-                { title: { key: 'Mobile', value: '0523053392' }, image: 'age icon' }
-            ],
-            description: "Hi, this is a short description of my my my mydsf djsdf ksdf afhsdlk fssd fkldf klsdhfk sddfk sdf kds"
-        }
+        content: [{
+                highlights: [
+                    { title: { key: 'Name', value: 'Ran Tayeb' }, img: 'Name' },
+                    { title: { key: 'Email', value: 'tayebran@gmail.com' }, img: 'Email' },
+                    { title: { key: 'Status', value: 'Married' }, img: 'Status' },
+                    { title: { key: 'Mobile', value: '0523053392' }, img: 'Phone' }
+                ],
+                description: "Hi to you all, and this is a short discription that i should fill up",
+            }]
     },
     {
         cardId: 2,
+        content: [{
+                highlights: [
+                    { title: { key: 'Name', value: 'Ran Tayeb' }, img: 'Name' },
+                    { title: { key: 'Email', value: 'tayebran@gmail.com' }, img: 'Email' },
+                    { title: { key: 'Status', value: 'Married' }, img: 'age icon' },
+                    { title: { key: 'Mobile', value: '0523053392' }, img: 'age icon' }
+                ],
+                projectTitle: "Minesweeper",
+                description: "This <a href='https://tygro101.github.io//minesweeper-angular/'>Project</a is Minesweeper game made with angular 2",
+            }]
     },
     {
         cardId: 3,
