@@ -66,21 +66,23 @@ export const CARD_FACES:Array<CardContent> = [
                 { title: {key:'Mobile'   , value:'0523053392'}, img: 'Phone'}  
             ],
             
-            description:"Hi to you all, and this is a short discription that i should fill up",
+            description:`Hi to you all
+                         Im Ran Working as a Full-Stack developer at dbMotion / Allscripts Welcome to my portfolio, hope you like it.`,
             //video:"https://www.youtube.com/embed/IAhM4t0EuwM"
         }]
     },
     { 
         cardId:2,
         content:[{
+            highlightsIcon:"assets/img/project-highlights/minesweeper.png",
             highlights:[
-                { title: {key:'Name'    , value:'Ran Tayeb'}, img: 'Name'},    
-                { title: {key:'Email'   , value:'tayebran@gmail.com'}, img: 'Email'},
-                { title: {key:'Status'  , value:'Married'}, img: 'age icon'},
-                { title: {key:'Mobile'   , value:'0523053392'}, img: 'age icon'}  
+                { title: {key:'Proejct Type'   , value:'Gaming'}, img: 'Settings'},
+                { title: {key:'Framwork'    , value:'Angular 2.0'}, img: 'Angular'}
             ],
-            projectTitle:"Minesweeper",
-            description:"This <a href='https://tygro101.github.io//minesweeper-angular/'>Project</a is Minesweeper game made with angular 2",
+            description:`This is a <a href='https://tygro101.github.io//minesweeper-angular/'>Minesweeper</a> game, writting with angular 2.0 framwork,
+            you can find the open soruce by clicking <a href='https://github.com/Tygro101/minesweeper-angular'>here</a>`,
+            video: "https://www.youtube.com/embed/GsRv5kUafoU",
+            projectTitle: "Minesweeper"
         }]
     },
     { 
