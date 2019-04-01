@@ -79,8 +79,8 @@ export const CARD_FACES:Array<CardContent> = [
                 { title: {key:'Proejct Type'   , value:'Gaming'}, img: 'Settings'},
                 { title: {key:'Framwork'    , value:'Angular 2.0'}, img: 'Angular'}
             ],
-            description:`This is a <a href='https://tygro101.github.io//minesweeper-angular/'>Minesweeper</a> game, writting with angular 2.0 framwork,
-            you can find the open soruce by clicking <a href='https://github.com/Tygro101/minesweeper-angular'>here</a>`,
+            description:`This is a <a href='https://tygro101.github.io//minesweeper-angular/'>Minesweeper</a> game, writing with angular 2.0 framework,
+            you can find the open source by clicking <a href='https://github.com/Tygro101/minesweeper-angular'>here</a>`,
             video: "https://www.youtube.com/embed/GsRv5kUafoU",
             projectTitle: "Minesweeper"
         }]
