@@ -359,7 +359,7 @@ var DescriptionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}\">\r\n  <span (click)=\"close()\" class=\"close_image\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary}\"></span>\r\n  <div class=\"img-container\">\r\n    <img src=\"{{card.cardImage}}\" alt=\"\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }\">\r\n  </div>\r\n  <div class=\"card-title\">{{card.cardTitle}}</div>\r\n  <div class=\"container\"  id=\"scrollbar\">\r\n    <detailed-content *ngFor='let content of contents' [content]='content'>\r\n      <div class=\"project-title\">{{content.projectTitle}}</div>\r\n      <div *ngFor='let highlight of content.highlights' class='item'>\r\n        <highlight [highlight]='highlight'></highlight>\r\n      </div>\r\n      <img src=\"content.highlightsIcon\" class=\"proj-img\">\r\n      <description class=\"description\" [description]='content.description'></description>\r\n      <iframe *ngIf='content.video' width=\"480\" height=\"242\" [src]='content.video | safeUrl' frameborder=\"0\" allowfullscreen>\r\n      </iframe>\r\n    </detailed-content>\r\n  </div>\r\n\r\n</div>\r\n"
+module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}\">\r\n  <span (click)=\"close()\" class=\"close_image\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary}\"></span>\r\n  <div class=\"img-container\">\r\n    <img src=\"{{card.cardImage}}\" alt=\"\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }\">\r\n  </div>\r\n  <div class=\"card-title\">{{card.cardTitle}}</div>\r\n  <div class=\"container\"  id=\"scrollbar\">\r\n    <detailed-content *ngFor='let content of contents' [content]='content'>\r\n      <div class=\"project-title\">{{content.projectTitle}}</div>\r\n      <div *ngFor='let highlight of content.highlights' class='item'>\r\n        <highlight [highlight]='highlight'></highlight>\r\n      </div>\r\n      <img [src]=\"content.highlightsIcon\" class=\"proj-img\">\r\n      <description class=\"description\" [description]='content.description'></description>\r\n      <iframe *ngIf='content.video' width=\"480\" height=\"242\" [src]='content.video | safeUrl' frameborder=\"0\" allowfullscreen>\r\n      </iframe>\r\n    </detailed-content>\r\n  </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -590,7 +590,7 @@ module.exports = "<div class=\"container\">\n  <div class=\"content\">\n    <div
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".content {\n  height: 100%; }\n\n.proj {\n  padding: 10px;\n  font-size: 20px; }\n\n.image {\n  width: 50px;\n  height: 50px;\n  margin: auto;\n  padding: 5px;\n  border-radius: 50%;\n  border: 1px solid  beige;\n  margin-left: 10px; }\n\n.image ::ng-deep img {\n    width: 50px; }\n\n.highlights {\n  display: -ms-grid;\n  display: grid;\n  width: 100%;\n  grid-auto-columns: auto;\n  grid-template-columns: repeat(auto-fill, minmax(auto, 100px));\n  padding: 0px 10px 10px 10px; }\n\n.highlights ::ng-deep .item {\n  margin: auto;\n  align-items: center;\n  display: flex;\n  height: 50px;\n  width: 100%; }\n\n.highlights ::ng-deep .item img {\n    text-align: center;\n    height: 20px;\n    width: 20px;\n    -ms-grid-row-align: center;\n        align-self: center;\n    padding: 5px;\n    border-radius: 50%; }\n\n.highlights ::ng-deep .item .title {\n    font-size: 12px;\n    font-weight: bold;\n    font-family: cursive !important;\n    color: beige;\n    margin: auto; }\n\n.highlights ::ng-deep .item .title .key {\n      font-size: 11px; }\n\n.highlights ::ng-deep .item .title div {\n      margin-bottom: 0px; }\n\n.title {\n  font-size: 14px;\n  font-weight: bold;\n  font-family: cursive !important;\n  color: beige;\n  margin: auto;\n  margin-bottom: 5px; }\n\n.proj {\n  margin-left: 10px; }\n\n.description {\n  width: 100%;\n  color: beige;\n  margin: 0px 20px 0px 20px; }\n\n.video {\n  text-align: center; }\n"
+module.exports = ".content {\n  height: 100%; }\n\n.proj {\n  padding: 10px;\n  font-size: 20px;\n  text-align: center; }\n\n.image {\n  width: 50px;\n  height: 50px;\n  margin: auto;\n  padding: 5px;\n  background: #ffffff69;\n  border-radius: 50%;\n  margin-left: 10px; }\n\n.image ::ng-deep img {\n    width: 50px; }\n\n.highlights {\n  display: -ms-grid;\n  display: grid;\n  width: 100%;\n  grid-auto-columns: auto;\n  grid-template-columns: repeat(auto-fill, minmax(auto, 100px));\n  padding: 0px 10px 10px 10px; }\n\n.highlights ::ng-deep .item {\n  margin: auto;\n  align-items: center;\n  display: flex;\n  height: 50px;\n  width: 100%; }\n\n.highlights ::ng-deep .item img {\n    text-align: center;\n    height: 20px;\n    width: 20px;\n    -ms-grid-row-align: center;\n        align-self: center;\n    padding: 5px;\n    border-radius: 50%; }\n\n.highlights ::ng-deep .item .title {\n    font-size: 12px;\n    font-weight: bold;\n    font-family: cursive !important;\n    color: beige;\n    margin: auto; }\n\n.highlights ::ng-deep .item .title .key {\n      font-size: 11px; }\n\n.highlights ::ng-deep .item .title div {\n      margin-bottom: 0px; }\n\n.title {\n  font-size: 14px;\n  font-weight: bold;\n  font-family: cursive !important;\n  color: beige;\n  margin: auto;\n  margin-bottom: 5px; }\n\n.proj {\n  margin-left: 10px; }\n\n.description {\n  width: 100%;\n  color: beige;\n  margin: 20px; }\n\n.video {\n  text-align: center; }\n"
 
 /***/ }),
 
@@ -898,6 +898,8 @@ var ImageResolverService = /** @class */ (function () {
         this.images["Email"] = "assets/img/highlights/email.svg";
         this.images["Status"] = "assets/img/highlights/status.svg";
         this.images["Phone"] = "assets/img/highlights/phone.svg";
+        this.images["Angular"] = "assets/img/highlights/angular.svg";
+        this.images["Settings"] = "assets/img/highlights/settings.svg";
     }
     ImageResolverService.prototype.resolveImg = function (key) {
         return this.images[key];
@@ -1011,20 +1013,20 @@ var CARD_FACES = [
                     { title: { key: 'Status', value: 'Married' }, img: 'Status' },
                     { title: { key: 'Mobile', value: '0523053392' }, img: 'Phone' }
                 ],
-                description: "Hi to you all, and this is a short discription that i should fill up",
+                description: "Hi to you all\n                         Im Ran Working as a Full-Stack developer at dbMotion / Allscripts Welcome to my portfolio, hope you like it.",
             }]
     },
     {
         cardId: 2,
         content: [{
+                highlightsIcon: "assets/img/project-highlights/minesweeper.png",
                 highlights: [
-                    { title: { key: 'Name', value: 'Ran Tayeb' }, img: 'Name' },
-                    { title: { key: 'Email', value: 'tayebran@gmail.com' }, img: 'Email' },
-                    { title: { key: 'Status', value: 'Married' }, img: 'age icon' },
-                    { title: { key: 'Mobile', value: '0523053392' }, img: 'age icon' }
+                    { title: { key: 'Proejct Type', value: 'Gaming' }, img: 'Settings' },
+                    { title: { key: 'Framwork', value: 'Angular 2.0' }, img: 'Angular' }
                 ],
-                projectTitle: "Minesweeper",
-                description: "This <a href='https://tygro101.github.io//minesweeper-angular/'>Project</a is Minesweeper game made with angular 2",
+                description: "This is a <a href='https://tygro101.github.io//minesweeper-angular/'>Minesweeper</a> game, writting with angular 2.0 framwork,\n            you can find the open soruce by clicking <a href='https://github.com/Tygro101/minesweeper-angular'>here</a>",
+                video: "https://www.youtube.com/embed/GsRv5kUafoU",
+                projectTitle: "Minesweeper"
             }]
     },
     {
