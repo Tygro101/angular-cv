@@ -359,7 +359,7 @@ var DescriptionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}\">\r\n  <span (click)=\"close()\" class=\"close_image\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary}\"></span>\r\n  <div class=\"img-container\">\r\n    <img src=\"{{card.cardImage}}\" alt=\"\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }\">\r\n  </div>\r\n  <div class=\"card-title\">{{card.cardTitle}}</div>\r\n  <div class=\"container\"  id=\"scrollbar\">\r\n    <detailed-content *ngFor='let content of contents' [content]='content'>\r\n      <div class=\"project-title\">{{content.projectTitle}}</div>\r\n      <div *ngFor='let highlight of content.highlights' class='item'>\r\n        <highlight [highlight]='highlight'></highlight>\r\n      </div>\r\n      <img [src]=\"content.highlightsIcon\" class=\"proj-img\">\r\n      <description class=\"description\" [description]='content.description'></description>\r\n      <iframe *ngIf='content.video' width=\"490\" height=\"242\" [src]='content.video | safeUrl' frameborder=\"0\" allowfullscreen>\r\n      </iframe>\r\n    </detailed-content>\r\n  </div>\r\n\r\n</div>\r\n"
+module.exports = "<div #DetailedCard *ngIf='show' class=\"detailed-container\"\r\n  [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}\">\r\n  <span (click)=\"close()\" class=\"close_image\" [ngStyle]=\"{ 'background': card.cardBackgrowndPrimary}\"></span>\r\n  <div class=\"img-container\">\r\n    <img src=\"{{card.cardImage}}\" alt=\"\"\r\n      [ngStyle]=\"{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }\">\r\n  </div>\r\n  <div class=\"card-title\">{{card.cardTitle}}</div>\r\n  <div class=\"container\" id=\"scrollbar\">\r\n    <detailed-content *ngFor='let content of contents' [content]='content'>\r\n      <div class=\"project-title\">{{content.projectTitle}}</div>\r\n      <div *ngFor='let highlight of content.highlights' class='item'>\r\n        <highlight [highlight]='highlight'></highlight>\r\n      </div>\r\n      <img [src]=\"content.highlightsIcon\" class=\"proj-img\">\r\n      <description class=\"description\" [description]='content.description'></description>\r\n      <iframe *ngIf='content.video' width=\"490\" height=\"242\" [src]='content.video | safeUrl' frameborder=\"0\"\r\n        allowfullscreen>\r\n      </iframe>\r\n      <div class=\"separator\"></div>\r\n    </detailed-content>\r\n  </div>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -370,7 +370,7 @@ module.exports = "<div *ngIf='show' class=\"detailed-container\" [ngStyle]=\"{ '
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container {\n  overflow-y: auto;\n  overflow-x: hidden;\n  max-height: 300px; }\n\n.detailed-container {\n  max-width: 510px;\n  min-width: 350px;\n  z-index: 1;\n  min-height: 200px;\n  position: absolute;\n  margin: 0 auto;\n  -ms-grid-row-align: center;\n      align-self: center;\n  border-radius: 10px;\n  box-shadow: 0 3px 3px 0 rgba(75, 75, 75, 0.5);\n  right: 0;\n  left: 0; }\n\n.detailed-container .close_image {\n    position: absolute;\n    right: 0;\n    margin: 5px;\n    width: 7px;\n    height: 7px;\n    background-color: #bbb;\n    border-radius: 50%;\n    border-width: 3px;\n    border-color: #eeeeee;\n    border-style: solid; }\n\n.detailed-container .img-container {\n    text-align: center; }\n\n.detailed-container .img-container img {\n      margin-top: 20px;\n      text-align: center;\n      height: 100px;\n      width: 100px;\n      left: 100px;\n      -ms-grid-row-align: center;\n          align-self: center;\n      padding: 5px;\n      background: #b6b6b6;\n      border-radius: 50%; }\n\n.detailed-container .card-title {\n    font-family: cursive !important;\n    text-align: center;\n    margin-top: 5px;\n    font-size: 17px;\n    margin-bottom: 10px;\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\",\r sans-serif;\n    font-weight: bold;\n    color: beige; }\n\n.detailed-container .content-header {\n    display: flex;\n    margin: 4px;\n    margin-left: 9px;\n    font-family: cursive;\n    color: antiquewhite;\n    font-weight: bold; }\n\n.detailed-container .content-header img {\n      cursor: pointer;\n      margin-right: 10px;\n      width: 10px;\n      height: 10px; }\n\n#scrollbar::-webkit-scrollbar-track {\n  border-radius: 10px;\n  background-color: transparent; }\n\n#scrollbar::-webkit-scrollbar {\n  width: 12px;\n  background-color: transparent; }\n\n#scrollbar::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: beige;\n  padding-right: 1px;\n  background-clip: content-box;\n  /* padding-right: 9px; */\n  border: 3px solid transparent; }\n\n#scrollbar::-webkit-scrollbar-thumb:hover {\n  border-radius: 10px;\n  background-color: #fff; }\n\n#scrollbar::-webkit-scrollbar-thumb:active {\n  background-color: linear-gradient(left, #22ADD4, #1E98BA); }\n"
+module.exports = ".container {\n  overflow-y: auto;\n  overflow-x: hidden;\n  max-height: 300px; }\n  .container detailed-content:last-child .separator {\n    height: 0px; }\n  .detailed-container {\n  max-width: 510px;\n  min-width: 350px;\n  z-index: 1;\n  min-height: 200px;\n  position: absolute;\n  margin: 0 auto;\n  -ms-grid-row-align: center;\n      align-self: center;\n  border-radius: 10px;\n  box-shadow: 0 3px 3px 0 rgba(75, 75, 75, 0.5);\n  right: 0;\n  left: 0; }\n  .detailed-container .close_image {\n    position: absolute;\n    right: 0;\n    margin: 5px;\n    width: 7px;\n    height: 7px;\n    background-color: #bbb;\n    border-radius: 50%;\n    border-width: 3px;\n    border-color: #eeeeee;\n    border-style: solid; }\n  .detailed-container .img-container {\n    text-align: center; }\n  .detailed-container .img-container img {\n      margin-top: 20px;\n      text-align: center;\n      height: 100px;\n      width: 100px;\n      left: 100px;\n      -ms-grid-row-align: center;\n          align-self: center;\n      padding: 5px;\n      background: #b6b6b6;\n      border-radius: 50%; }\n  .detailed-container .card-title {\n    font-family: cursive !important;\n    text-align: center;\n    margin-top: 5px;\n    font-size: 17px;\n    margin-bottom: 10px;\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\",\r sans-serif;\n    font-weight: bold;\n    color: beige; }\n  .detailed-container .content-header {\n    display: flex;\n    margin: 4px;\n    margin-left: 9px;\n    font-family: cursive;\n    color: antiquewhite;\n    font-weight: bold; }\n  .detailed-container .content-header img {\n      cursor: pointer;\n      margin-right: 10px;\n      width: 10px;\n      height: 10px; }\n  #scrollbar::-webkit-scrollbar-track {\n  border-radius: 10px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar {\n  width: 12px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: beige;\n  padding-right: 1px;\n  background-clip: content-box;\n  /* padding-right: 9px; */\n  border: 3px solid transparent; }\n  #scrollbar::-webkit-scrollbar-thumb:hover {\n  border-radius: 10px;\n  background-color: #fff; }\n  #scrollbar::-webkit-scrollbar-thumb:active {\n  background-color: linear-gradient(left, #22ADD4, #1E98BA); }\n"
 
 /***/ }),
 
@@ -421,6 +421,33 @@ var DetailedCardViewComponent = /** @class */ (function () {
     DetailedCardViewComponent.prototype.close = function () {
         this.show = false;
     };
+    // close when clicking outside of the element
+    DetailedCardViewComponent.prototype.clickout = function (event) {
+        if (!this.container)
+            return;
+        if (!this.container.nativeElement.contains(event.target) && !this.checkIfThisIsItem(event)) {
+            this.show = false;
+        }
+    };
+    DetailedCardViewComponent.prototype.checkIfThisIsItem = function (event) {
+        var currentEvent = event.target;
+        while (currentEvent) {
+            if (currentEvent.className == "item")
+                return true;
+            currentEvent = currentEvent.parentElement;
+        }
+        return false;
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])("DetailedCard"),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], DetailedCardViewComponent.prototype, "container", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('document:click', ['$event']),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", void 0)
+    ], DetailedCardViewComponent.prototype, "clickout", null);
     DetailedCardViewComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-detailed-component',
@@ -579,7 +606,7 @@ var getDetailedViewCard = function (state) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"content\">\n    <div class=\"proj title\">\n      <ng-content select=\".project-title\"></ng-content>\n    </div>\n    <div style=\"display: flex\">\n      <div class=\"image\" *ngIf='content.highlightsIcon'>\n        <ng-content select=\".proj-img\"></ng-content>\n      </div>\n      <div class=\"highlights\">\n        <ng-content select=\".item\"></ng-content>\n      </div>\n    </div>\n\n    <div class=\"description\">\n      <div class=\"title\">Short Desctiption</div>\n      <ng-content select=\".description\"></ng-content>\n    </div>\n    <div class=\"video\">\n      <ng-content select=\"iframe\"></ng-content>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <div class=\"content\">\n    <div class=\"proj title\">\n      <ng-content select=\".project-title\"></ng-content>\n    </div>\n    <div style=\"display: flex\">\n      <div class=\"image\" *ngIf='content.highlightsIcon'>\n        <ng-content select=\".proj-img\"></ng-content>\n      </div>\n      <div class=\"highlights\">\n        <ng-content select=\".item\"></ng-content>\n      </div>\n    </div>\n\n    <div class=\"description\">\n      <div class=\"title\">Short Description</div>\n      <ng-content select=\".description\"></ng-content>\n    </div>\n    <div class=\"video\">\n      <ng-content select=\"iframe\"></ng-content>\n    </div>\n  </div>\n  <ng-content select=\".separator\"></ng-content>\n</div>"
 
 /***/ }),
 
@@ -590,7 +617,7 @@ module.exports = "<div class=\"container\">\n  <div class=\"content\">\n    <div
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".content {\n  height: 100%; }\n\n.video:last-child {\n  margin-bottom: 10px; }\n\n.proj {\n  padding: 10px;\n  font-size: 20px;\n  text-align: center; }\n\n.image {\n  width: 50px;\n  height: 50px;\n  margin: auto;\n  padding: 5px;\n  background: #ffffff69;\n  border-radius: 50%;\n  margin-left: 10px; }\n\n.image ::ng-deep img {\n    width: 50px; }\n\n.highlights {\n  display: -ms-grid;\n  display: grid;\n  width: 100%;\n  grid-auto-columns: auto;\n  grid-template-columns: repeat(auto-fill, minmax(auto, 100px));\n  padding: 0px 10px 10px 10px; }\n\n.highlights ::ng-deep .item {\n  margin: auto;\n  align-items: center;\n  display: flex;\n  height: 50px;\n  width: 100%; }\n\n.highlights ::ng-deep .item img {\n    text-align: center;\n    height: 20px;\n    width: 20px;\n    -ms-grid-row-align: center;\n        align-self: center;\n    padding: 5px;\n    border-radius: 50%; }\n\n.highlights ::ng-deep .item .title {\n    font-size: 12px;\n    font-weight: bold;\n    font-family: cursive !important;\n    color: beige;\n    margin: auto; }\n\n.highlights ::ng-deep .item .title .key {\n      font-size: 11px; }\n\n.highlights ::ng-deep .item .title div {\n      margin-bottom: 0px; }\n\n.title {\n  font-size: 14px;\n  font-weight: bold;\n  font-family: cursive !important;\n  color: beige;\n  margin: auto;\n  margin-bottom: 5px; }\n\n.proj {\n  margin-left: 10px; }\n\n.description {\n  width: 100%;\n  color: beige;\n  margin: 20px; }\n\n.video {\n  text-align: center; }\n"
+module.exports = ".content {\n  height: 100%; }\n\n.video:last-child {\n  margin-bottom: 10px; }\n\n.proj {\n  padding: 10px;\n  font-size: 20px;\n  text-align: center; }\n\n.image {\n  width: 50px;\n  height: 50px;\n  margin: auto;\n  padding: 5px;\n  background: #ffffff69;\n  border-radius: 50%;\n  margin-left: 10px; }\n\n.image ::ng-deep img {\n    width: 50px; }\n\n.highlights {\n  display: -ms-grid;\n  display: grid;\n  width: 100%;\n  grid-auto-columns: auto;\n  grid-template-columns: repeat(auto-fill, minmax(auto, 100px));\n  padding: 0px 10px 10px 10px; }\n\n.highlights ::ng-deep .item {\n  margin: auto;\n  align-items: center;\n  display: flex;\n  height: 50px;\n  width: 100%; }\n\n.highlights ::ng-deep .item img {\n    text-align: center;\n    height: 20px;\n    width: 20px;\n    -ms-grid-row-align: center;\n        align-self: center;\n    padding: 5px;\n    border-radius: 50%; }\n\n.highlights ::ng-deep .item .title {\n    font-size: 12px;\n    font-weight: bold;\n    font-family: cursive !important;\n    color: beige;\n    margin: auto; }\n\n.highlights ::ng-deep .item .title .key {\n      font-size: 11px; }\n\n.highlights ::ng-deep .item .title div {\n      margin-bottom: 0px; }\n\n.title {\n  font-size: 14px;\n  font-weight: bold;\n  font-family: cursive !important;\n  color: beige;\n  margin: auto;\n  margin-bottom: 5px; }\n\n.proj {\n  margin-left: 10px; }\n\n.description {\n  width: 100%;\n  color: beige;\n  margin: 20px; }\n\n.video {\n  text-align: center; }\n\n::ng-deep .separator {\n  height: 2px;\n  margin: auto;\n  width: 60%;\n  margin-bottom: 20px;\n  background: beige; }\n"
 
 /***/ }),
 
@@ -987,7 +1014,7 @@ var CARDS = [
         cardBackgrowndPrimaryDark: "#494949"
     },
     {
-        cardId: 4,
+        cardId: 5,
         cardTitle: "Node.js",
         cardImage: "assets/img/nodejs.png",
         cardBackgrowndPrimary: "#7cb342",
@@ -995,7 +1022,7 @@ var CARDS = [
         cardBackgrowndPrimaryDark: "#4b830d"
     },
     {
-        cardId: 5,
+        cardId: 6,
         cardTitle: "Academic degree",
         cardImage: "assets/img/university.png",
         cardBackgrowndPrimary: "#6d4c41",
@@ -1021,7 +1048,7 @@ var CARD_FACES = [
         content: [{
                 highlightsIcon: "assets/img/project-highlights/minesweeper.png",
                 highlights: [
-                    { title: { key: 'Proejct Type', value: 'Gaming' }, img: 'Settings' },
+                    { title: { key: 'Project Type', value: 'Gaming' }, img: 'Settings' },
                     { title: { key: 'Framework', value: 'Angular 2.0' }, img: 'Angular' }
                 ],
                 description: "This is a <a href='https://tygro101.github.io//minesweeper-angular/'>Minesweeper</a> game, writing with angular 2.0 framework,\n            you can find the open source by clicking <a href='https://github.com/Tygro101/minesweeper-angular'>here</a>",
@@ -1030,7 +1057,7 @@ var CARD_FACES = [
             },
             {
                 highlights: [
-                    { title: { key: 'Proejct Type', value: 'Chat' }, img: 'Settings' },
+                    { title: { key: 'Project Type', value: 'Chat' }, img: 'Settings' },
                     { title: { key: 'Framework', value: 'Angular js' }, img: 'Angular' },
                     { title: { key: 'Server', value: 'Node js' }, img: 'Node' },
                     { title: { key: 'Communication', value: 'Socket.io' }, img: 'Socket.io' },
@@ -1048,7 +1075,7 @@ var CARD_FACES = [
             {
                 highlightsIcon: "assets/img/project-highlights/minesweeper.png",
                 highlights: [
-                    { title: { key: 'Proejct Type', value: 'Gaming' }, img: 'Settings' },
+                    { title: { key: 'Project Type', value: 'Gaming' }, img: 'Settings' },
                     { title: { key: 'Framework', value: 'Unity' }, img: 'Angular' },
                     { title: { key: 'Script', value: 'C#' }, img: 'Angular' },
                     { title: { key: 'Published', value: 'Google Play' }, img: 'Angular' },
@@ -1060,30 +1087,38 @@ var CARD_FACES = [
             {
                 highlightsIcon: "assets/img/project-highlights/minesweeper.png",
                 highlights: [
-                    { title: { key: 'Proejct Type', value: 'Gaming' }, img: 'Settings' },
+                    { title: { key: 'Project Type', value: 'Gaming' }, img: 'Settings' },
                     { title: { key: 'Framework', value: 'Unity' }, img: 'Angular' },
                     { title: { key: 'Script', value: 'C#' }, img: 'Angular' },
                     { title: { key: 'Published On', value: 'Google Play' }, img: 'Angular' },
-                    { title: { key: 'Gaming services', value: 'Google paly services' }, img: 'Angular' },
+                    { title: { key: 'Gaming services', value: 'Google play services' }, img: 'Angular' },
                     { title: { key: 'Ads provider', value: 'Admob' }, img: 'Angular' }
                 ],
-                description: "<a href='https://play.google.com/store/apps/details?id=com.Ran.CirclBird&hl=en'>Circle Bird</a> is my first released gaming application made with Unity 3D, \n                Connecting to google play services give me the ability to add highscore board, and achievements which helps to create compatitive atmosphere",
+                description: "<a href='https://play.google.com/store/apps/details?id=com.Ran.CirclBird&hl=en'>Circle Bird</a> is my first released gaming application made with Unity 3D, \n                Connecting to google play services give me the ability to add highscore board, and achievements which helps to create competitive atmosphere",
                 video: "https://www.youtube.com/embed/ArN72oQP_Ak",
                 projectTitle: "Circle Bird"
             },
             {
                 highlightsIcon: "assets/img/project-highlights/minesweeper.png",
                 highlights: [
-                    { title: { key: 'Proejct Type', value: 'Gaming' }, img: 'Settings' },
+                    { title: { key: 'Project Type', value: 'Gaming' }, img: 'Settings' },
                     { title: { key: 'Framework', value: 'Unity' }, img: 'Angular' },
-                    { title: { key: 'Script', value: 'C#' }, img: 'Angular' },
-                    { title: { key: 'Published On', value: 'Google Play' }, img: 'Angular' },
-                    { title: { key: 'Gaming services', value: 'Google paly services' }, img: 'Angular' },
-                    { title: { key: 'Ads provider', value: 'Admob' }, img: 'Angular' }
+                    { title: { key: 'Script', value: 'C#' }, img: 'Angular' }
                 ],
-                description: "This is my first 3D game on Unity 3D <a href='https://www.indiegogo.com/projects/mazerun-game-android/x/16527556#/'>MazeRun</a>, this is unfinished game that was published as a crowdfunding project on \n                indiegogo, Which had a huge falure (: with no contributions, but still great game with great graphics",
+                description: "This is my first 3D game on Unity 3D <a href='https://www.indiegogo.com/projects/mazerun-game-android/x/16527556#/'>MazeRun</a>, this is unfinished game that was published as a crowdfunding project on \n                indiegogo, Which had a huge failure (: with no contributions, but still great game with great graphics",
                 video: "https://www.youtube.com/embed/IAhM4t0EuwM",
                 projectTitle: "Maze Run"
+            },
+            {
+                highlightsIcon: "assets/img/project-highlights/minesweeper.png",
+                highlights: [
+                    { title: { key: 'Project Type', value: 'Gaming' }, img: 'Settings' },
+                    { title: { key: 'Framework', value: 'LibGDX' }, img: 'Angular' },
+                    { title: { key: 'Script', value: 'Java' }, img: 'Angular' }
+                ],
+                description: "This is the <a href='https://www.indiegogo.com/projects/mazerun-game-android/x/16527556#/'>Classic Super Mario Game</a> \n                created while i learning game design, after getting the basics i tried to ",
+                video: "https://www.youtube.com/embed/ihtjt3gllxg",
+                projectTitle: "Super Mario"
             }
         ]
     },
