@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, ViewChildren, ElementRef } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppRoot } from 'src/app/store/model';
 import { getDetailedViewCard } from './store/selectors';
@@ -14,6 +14,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 
 export class DetailedCardViewComponent implements OnInit {
+  @ViewChild("DetailedCard") container: ElementRef;
   show: boolean;
   card: CardContent;
   contents: Array<Content>;
@@ -37,6 +38,24 @@ export class DetailedCardViewComponent implements OnInit {
 
   close(): void{
     this.show = false;
+  }
+
+
+  // close when clicking outside of the element
+  @HostListener('document:click', ['$event'])
+  clickout(event) {
+    if(!this.container) return;
+    if(!this.container.nativeElement.contains(event.target) && !this.checkIfThisIsItem(event)) {
+      this.show = false;
+    } 
+  }
+  checkIfThisIsItem(event: any): boolean {
+    let currentEvent = event.target;
+    while(currentEvent){
+      if(currentEvent.className == "item") return true;
+      currentEvent = currentEvent.parentElement;
+    }
+    return false;
   }
 
 }

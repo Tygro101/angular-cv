@@ -36,7 +36,7 @@ export const CARDS: Array<Card> = [
         cardBackgrowndPrimaryDark: "#494949"
     },
     {
-        cardId:4,
+        cardId:5,
         cardTitle: "Node.js",
         cardImage: "assets/img/nodejs.png",
         cardBackgrowndPrimary:  "#7cb342",
@@ -44,7 +44,7 @@ export const CARDS: Array<Card> = [
         cardBackgrowndPrimaryDark: "#4b830d"
     },
     {
-        cardId:5,
+        cardId:6,
         cardTitle: "Academic degree",
         cardImage: "assets/img/university.png",
         cardBackgrowndPrimary:  "#6d4c41", 
@@ -76,7 +76,7 @@ export const CARD_FACES:Array<CardContent> = [
         content:[{
             highlightsIcon:"assets/img/project-highlights/minesweeper.png",
             highlights:[
-                { title: {key:'Proejct Type'   , value:'Gaming'}, img: 'Settings'},
+                { title: {key:'Project Type'   , value:'Gaming'}, img: 'Settings'},
                 { title: {key:'Framework'    , value:'Angular 2.0'}, img: 'Angular'}
             ],
             description:`This is a <a href='https://tygro101.github.io//minesweeper-angular/'>Minesweeper</a> game, writing with angular 2.0 framework,
@@ -86,7 +86,7 @@ export const CARD_FACES:Array<CardContent> = [
         },
         {
             highlights:[
-                { title: {key:'Proejct Type'   , value:'Chat'}, img: 'Settings'},
+                { title: {key:'Project Type'   , value:'Chat'}, img: 'Settings'},
                 { title: {key:'Framework'    , value:'Angular js'}, img: 'Angular'},
                 { title: {key:'Server'    , value:'Node js'}, img: 'Node'},
                 { title: {key:'Communication'    , value:'Socket.io'}, img: 'Socket.io'},
@@ -105,7 +105,7 @@ export const CARD_FACES:Array<CardContent> = [
             {
                 highlightsIcon:"assets/img/project-highlights/minesweeper.png",
                 highlights:[
-                    { title: {key:'Proejct Type'   , value:'Gaming'}, img: 'Settings'},
+                    { title: {key:'Project Type'   , value:'Gaming'}, img: 'Settings'},
                     { title: {key:'Framework'    , value:'Unity'}, img: 'Angular'},
                     { title: {key:'Script'    , value:'C#'}, img: 'Angular'},
                     { title: {key:'Published'    , value:'Google Play'}, img: 'Angular'},
@@ -118,32 +118,41 @@ export const CARD_FACES:Array<CardContent> = [
             {
                 highlightsIcon:"assets/img/project-highlights/minesweeper.png",
                 highlights:[
-                    { title: {key:'Proejct Type'   , value:'Gaming'}, img: 'Settings'},
+                    { title: {key:'Project Type'   , value:'Gaming'}, img: 'Settings'},
                     { title: {key:'Framework'    , value:'Unity'}, img: 'Angular'},
                     { title: {key:'Script'    , value:'C#'}, img: 'Angular'},
                     { title: {key:'Published On'    , value:'Google Play'}, img: 'Angular'},
-                    { title: {key:'Gaming services'    , value:'Google paly services'}, img: 'Angular'},
+                    { title: {key:'Gaming services'    , value:'Google play services'}, img: 'Angular'},
                     { title: {key:'Ads provider'    , value:'Admob'}, img: 'Angular'}
                 ],
                 description:`<a href='https://play.google.com/store/apps/details?id=com.Ran.CirclBird&hl=en'>Circle Bird</a> is my first released gaming application made with Unity 3D, 
-                Connecting to google play services give me the ability to add highscore board, and achievements which helps to create compatitive atmosphere`,
+                Connecting to google play services give me the ability to add highscore board, and achievements which helps to create competitive atmosphere`,
                 video: "https://www.youtube.com/embed/ArN72oQP_Ak",
                 projectTitle: "Circle Bird"
             },
             {
                 highlightsIcon:"assets/img/project-highlights/minesweeper.png",
                 highlights:[
-                    { title: {key:'Proejct Type'   , value:'Gaming'}, img: 'Settings'},
+                    { title: {key:'Project Type'   , value:'Gaming'}, img: 'Settings'},
                     { title: {key:'Framework'    , value:'Unity'}, img: 'Angular'},
-                    { title: {key:'Script'    , value:'C#'}, img: 'Angular'},
-                    { title: {key:'Published On'    , value:'Google Play'}, img: 'Angular'},
-                    { title: {key:'Gaming services'    , value:'Google paly services'}, img: 'Angular'},
-                    { title: {key:'Ads provider'    , value:'Admob'}, img: 'Angular'}
+                    { title: {key:'Script'    , value:'C#'}, img: 'Angular'}
                 ],
                 description:`This is my first 3D game on Unity 3D <a href='https://www.indiegogo.com/projects/mazerun-game-android/x/16527556#/'>MazeRun</a>, this is unfinished game that was published as a crowdfunding project on 
-                indiegogo, Which had a huge falure (: with no contributions, but still great game with great graphics`,
+                indiegogo, Which had a huge failure (: with no contributions, but still great game with great graphics`,
                 video: "https://www.youtube.com/embed/IAhM4t0EuwM",
                 projectTitle: "Maze Run"
+            },
+            {
+                highlightsIcon:"assets/img/project-highlights/minesweeper.png",
+                highlights:[
+                    { title: {key:'Project Type'   , value:'Gaming'}, img: 'Settings'},
+                    { title: {key:'Framework'    , value:'LibGDX'}, img: 'Angular'},
+                    { title: {key:'Script'    , value:'Java'}, img: 'Angular'}
+                ],
+                description:`This is the <a href='https://www.indiegogo.com/projects/mazerun-game-android/x/16527556#/'>Classic Super Mario Game</a> 
+                created while i learning game design, after getting the basics i tried to `,
+                video: "https://www.youtube.com/embed/ihtjt3gllxg",
+                projectTitle: "Super Mario"
             }
         ]
     },
