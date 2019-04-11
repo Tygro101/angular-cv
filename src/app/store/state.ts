@@ -13,11 +13,11 @@ export const CARDS: Array<Card> = [
     },
     {
         cardId:7,
-        cardTitle: "Carrer",
-        cardImage: "assets/img/profile.jpg",
-        cardBackgrowndPrimary:  "##616161",
-        cardBackgrowndPrimaryLight: "#8e8e8e",
-        cardBackgrowndPrimaryDark: "#373737",
+        cardTitle: "Job Profile",
+        cardImage: "assets/img/job.png",
+        cardBackgrowndPrimary:  "#3f51b5",
+        cardBackgrowndPrimaryLight: "#757de8",
+        cardBackgrowndPrimaryDark: "#002984",
     },
     {
         cardId:2,
@@ -122,7 +122,7 @@ export const CARD_FACES:Array<CardContent> = [
                 description:`<a href='https://play.google.com/store/apps/details?id=com.dev.ran.dowme'>Drops</a> is android native application, the idea of the application is
                 to give the user other another dimension of reminder based on location, the user can set location on google maps and set reminder on this location, when reaching this 
                 location the reminder will pop`,
-                video: "https://www.youtube.com/embed/N1u9I6UEclo",
+                //video: "https://lh3.googleusercontent.com/6B01HEhBGS1mxdBCraUObw6_vOA8MVQXx6hYVVxVuivoXzYOTNI6Dr4wz5i9kW6-PF0j=w1154-h650-rw",
                 projectTitle: "Drops"
             }]
     },
