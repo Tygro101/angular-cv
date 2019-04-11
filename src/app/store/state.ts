@@ -12,6 +12,14 @@ export const CARDS: Array<Card> = [
         cardBackgrowndPrimaryDark: "#34515e",
     },
     {
+        cardId:7,
+        cardTitle: "Carrer",
+        cardImage: "assets/img/profile.jpg",
+        cardBackgrowndPrimary:  "##616161",
+        cardBackgrowndPrimaryLight: "#8e8e8e",
+        cardBackgrowndPrimaryDark: "#373737",
+    },
+    {
         cardId:2,
         cardTitle: "Angular.io",
         cardImage: "assets/img/angular.png",
@@ -86,7 +94,7 @@ export const CARD_FACES:Array<CardContent> = [
         },
         {
             highlights:[
-                { title: {key:'Project Type'   , value:'Chat'}, img: 'Settings'},
+                { title: {key:'Project'   , value:'Chat'}, img: 'Settings'},
                 { title: {key:'Framework'    , value:'Angular js'}, img: 'Angular'},
                 { title: {key:'Server'    , value:'Node js'}, img: 'Node'},
                 { title: {key:'Communication'    , value:'Socket.io'}, img: 'Socket.io'},
@@ -99,7 +107,25 @@ export const CARD_FACES:Array<CardContent> = [
         }
         ]
     },
-    
+    {
+        cardId:3,
+        content:[
+                    {
+                highlightsIcon:"assets/img/project-highlights/minesweeper.png",
+                highlights:[
+                    { title: {key:'Application'   , value:'Loaction based Reminder'}, img: 'Settings'},
+                    { title: {key:'Framework'    , value:'Android'}, img: 'Angular'},
+                    { title: {key:'Script'    , value:'Java'}, img: 'Angular'},
+                    { title: {key:'Map'    , value:'Google Maps'}, img: 'Angular'},
+                    { title: {key:'Published on'    , value:'Google Play'}, img: 'Angular'},
+                ],
+                description:`<a href='https://play.google.com/store/apps/details?id=com.dev.ran.dowme'>Drops</a> is android native application, the idea of the application is
+                to give the user other another dimension of reminder based on location, the user can set location on google maps and set reminder on this location, when reaching this 
+                location the reminder will pop`,
+                video: "https://www.youtube.com/embed/N1u9I6UEclo",
+                projectTitle: "Drops"
+            }]
+    },
     { 
         cardId:4,
         content:[
@@ -159,6 +185,19 @@ export const CARD_FACES:Array<CardContent> = [
     },
     { 
         cardId:5,
+        content:[
+                {
+                highlightsIcon:"assets/img/project-highlights/minesweeper.png",
+                highlights:[
+                    { title: {key:'Project Type'   , value:'Gaming server'}, img: 'Settings'},
+                    { title: {key:'Framework'    , value:'Node js'}, img: 'Angular'},
+                    { title: {key:'Script'    , value:'javascript'}, img: 'Angular'},
+                    { title: {key:'Communication'    , value:'socket.io'}, img: 'Angular'}
+                ],
+                description:`This is a start of a poker server, should be a mobile clinet with socket connection to server, this is the <a href='https://github.com/Tygro101/GitTest'>Source</a>`,
+                projectTitle: "Poker"
+            }
+            ]
     },
     { 
         cardId:6,
