@@ -99,6 +99,7 @@ export const CARD_FACES:Array<CardContent> = [
         }
         ]
     },
+    
     { 
         cardId:4,
         content:[
@@ -157,9 +158,9 @@ export const CARD_FACES:Array<CardContent> = [
         ]
     },
     { 
-        cardId:4,
+        cardId:5,
     },
     { 
-        cardId:5,
+        cardId:6,
     }
 ]
