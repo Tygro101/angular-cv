@@ -75,8 +75,9 @@ export const CARD_FACES:Array<CardContent> = [
             ],
             
             description:`Hi to you all
-                         Im Ran Working as a Full-Stack developer at dbMotion / Allscripts Welcome to my portfolio, hope you like it.`,
-            //video:"https://www.youtube.com/embed/IAhM4t0EuwM"
+                         Im Ran Working as a Full-Stack developer at dbMotion / Allscripts Welcome to my portfolio, hope you like it,
+                         for more infirmation this is the <a href='https://github.com/Tygro101/angular-cv'>source code</a> source code`,
+            //
         }]
     },
     { 
@@ -85,10 +86,11 @@ export const CARD_FACES:Array<CardContent> = [
             highlightsIcon:"assets/img/project-highlights/minesweeper.png",
             highlights:[
                 { title: {key:'Project Type'   , value:'Gaming'}, img: 'Settings'},
-                { title: {key:'Framework'    , value:'Angular 2.0'}, img: 'Angular'}
+                { title: {key:'Framework'    , value:'Angular ^2.0'}, img: 'Angular'},
+                { title: {key:'unit Tests'    , value:'Angular ^2.0'}, img: 'Angular'}
             ],
-            description:`This is a <a href='https://tygro101.github.io//minesweeper-angular/'>Minesweeper</a> game, writing with angular 2.0 framework,
-            you can find the open source by clicking <a href='https://github.com/Tygro101/minesweeper-angular'>here</a>`,
+            description:`This is the classic <a href='https://tygro101.github.io//minesweeper-angular/'>Minesweeper</a> game, with the authentic feeling, created with angular 2.0 framework,
+            you can find the open source <a href='https://github.com/Tygro101/minesweeper-angular'>here</a>, the control are with the mouse, SHIFT + Mouse Click for flag marking`,
             video: "https://www.youtube.com/embed/GsRv5kUafoU",
             projectTitle: "Minesweeper"
         },
@@ -101,7 +103,7 @@ export const CARD_FACES:Array<CardContent> = [
                 { title: {key:'oAuth'   , value:'Facebook'}, img: 'Socket.io'},
             ],
             description:`This is a Chat site, writing with angular js framework,
-            you can find the open source by clicking <a href='https://github.com/Tygro101/Chet'>here</a>`,
+            you can find the open source <a href='https://github.com/Tygro101/Chet'>here</a>, this project have alot inside, like oAuth with facebook and mongoDB, node js and socket.io and the obvise angular js`,
             video: "https://www.youtube.com/embed/eGdkUPC3GHM",
             projectTitle: "Chat"
         }
@@ -137,8 +139,10 @@ export const CARD_FACES:Array<CardContent> = [
                     { title: {key:'Script'    , value:'C#'}, img: 'Angular'},
                     { title: {key:'Published'    , value:'Google Play'}, img: 'Angular'},
                 ],
-                description:`<a href='https://play.google.com/store/apps/details?id=com.Tayeb.CircleDunk&hl=en'>Circle Dunk</a> is my latest mobile game released, 
-                from day one, when i got a pc (Age 17) i know that i will make games in the future, Unity 3D is a great framework to start and develop with, very easy to adapt and very and fast learning curve`,
+                description:`<a href='https://play.google.com/store/apps/details?id=com.Tayeb.CircleDunk&hl=en'>Circle Dunk</a> is my latest mobile game released on android platform, 
+                from day one, when i got a pc (Age 17) i know that i will make games in the future, Unity 3D is a great framework to start and develop with, very easy to adapt and very and fast learning curve,
+                the goal of this game is to continue the ball movment and keep getting inside the circles, but there is a gravitation that pulling the ball to the center, every click on the screen
+                 will give the ball power to go up and keep circling for the wanted radius`,
                 video: "https://www.youtube.com/embed/N1u9I6UEclo",
                 projectTitle: "Circle Dunk"
             },
@@ -153,7 +157,7 @@ export const CARD_FACES:Array<CardContent> = [
                     { title: {key:'Ads provider'    , value:'Admob'}, img: 'Angular'}
                 ],
                 description:`<a href='https://play.google.com/store/apps/details?id=com.Ran.CirclBird&hl=en'>Circle Bird</a> is my first released gaming application made with Unity 3D, 
-                Connecting to google play services give me the ability to add highscore board, and achievements which helps to create competitive atmosphere`,
+                Connecting to google play services give me the ability to add highscore board, and achievements which helps to create competitive atmosphere, the goal of the game is to go throw every ring in our way`,
                 video: "https://www.youtube.com/embed/ArN72oQP_Ak",
                 projectTitle: "Circle Bird"
             },
@@ -164,8 +168,9 @@ export const CARD_FACES:Array<CardContent> = [
                     { title: {key:'Framework'    , value:'Unity'}, img: 'Angular'},
                     { title: {key:'Script'    , value:'C#'}, img: 'Angular'}
                 ],
-                description:`This is my first 3D game on Unity 3D <a href='https://www.indiegogo.com/projects/mazerun-game-android/x/16527556#/'>MazeRun</a>, this is unfinished game that was published as a crowdfunding project on 
-                indiegogo, Which had a huge failure (: with no contributions, but still great game with great graphics`,
+                description:`This is my first 3D game on Unity 3D MazeRun, this is unfinished game that was published as a crowdfunding project on 
+                indiegogo, Which had a huge failure (: with no contributions, but still great game with great graphics, the game idea is like a maze, full description can be
+                found inside indigogo page <a href='https://www.indiegogo.com/projects/mazerun-game-android/x/16527556#/'>MazeRun</a>`,
                 video: "https://www.youtube.com/embed/IAhM4t0EuwM",
                 projectTitle: "Maze Run"
             },
