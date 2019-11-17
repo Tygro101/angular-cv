@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <div class="description">
+    <div class="description" *ngIf='content.description'>
       <div class="title">Short Description</div>
       <ng-content select=".description"></ng-content>
     </div>

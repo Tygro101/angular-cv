@@ -1,4 +1,4 @@
 
 
-ng build --prod --base-href "https://tygro101.github.io/angular-cv/"
-ngh
+ng build --base-href "/angular-cv/"
+ngh --dir dist/angular-cv

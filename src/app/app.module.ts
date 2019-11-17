@@ -14,9 +14,23 @@ import { ProjectViewComponent } from './components/project-view/project-view.com
 import { HighlightComponent } from './components/highlight/highlight.component';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
 import { DescriptionComponent } from './components/description/description.component'
+import { RouterModule, Routes } from '@angular/router';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { NewVersionComponent } from './components/new-version/new-version.component';
+import { Level1CardComponent } from './components/new-version/level1-card/level1-card.component';
+
+
+const appRoutes: Routes = [
+  {
+    path: 'old',
+    component: HomePageComponent 
+  },
+  { path: '', component:  NewVersionComponent}
+];
 
 
 @NgModule({
+  
   declarations: [
     AppComponent,
     DetailedCardViewComponent,
@@ -25,7 +39,10 @@ import { DescriptionComponent } from './components/description/description.compo
     ProjectViewComponent,
     HighlightComponent,
     SafeUrlPipe,
-    DescriptionComponent
+    DescriptionComponent,
+    HomePageComponent,
+    NewVersionComponent,
+    Level1CardComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +51,11 @@ import { DescriptionComponent } from './components/description/description.compo
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
-    })
+    }),
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

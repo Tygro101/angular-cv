@@ -3,8 +3,5 @@
     <h2>CV</h2>
   </div>
 
-  <app-detailed-component></app-detailed-component>
-  <div class="contnet">
-    <card class="item" *ngFor="let crd of cards$ | async" [card]='crd' (onClick)='cardSelected($event)'></card>
-  </div>
+  <router-outlet></router-outlet>
 </div>

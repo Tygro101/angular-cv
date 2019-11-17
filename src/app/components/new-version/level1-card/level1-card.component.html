@@ -1,0 +1,6 @@
+<div class="card ripple" [ngStyle]="{ 'background': card.cardBackgrowndPrimary}"  (click)='onClick()'>
+    <div class="img-container">
+      <img [src]="card.cardImage" [ngStyle]="{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }">
+    </div>
+    <div class="card-title">{{card.cardTitle}}</div>
+</div> 

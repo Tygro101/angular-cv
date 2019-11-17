@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="level1">
+    <app-level1-card *ngFor="let crd of cards$ | async" [card]='crd'></app-level1-card>
+  </div>
+  <div class="level2">
+      <app-detailed-component></app-detailed-component>
+  </div>
+</div>

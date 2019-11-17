@@ -1,11 +1,11 @@
-<div #DetailedCard *ngIf='show' class="detailed-container"
-  [ngStyle]="{ 'background': card.cardBackgrowndPrimary, 'margin-top': '10px'}">
-  <span (click)="close()" class="close_image" [ngStyle]="{ 'background': card.cardBackgrowndPrimary}"></span>
-  <div class="img-container">
-    <img src="{{card.cardImage}}" alt=""
-      [ngStyle]="{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }">
+<div #DetailedCard *ngIf='show' class="detailed-container">
+  <div>
+    <div class="img-container">
+      <img src="{{card.cardImage}}" alt=""
+        [ngStyle]="{ 'background': card.cardBackgrowndPrimaryLight , 'border': '0px solid ' + card.cardBackgrowndPrimaryDark }">
+    </div>
+    <div class="card-title">{{card.cardTitle}}</div>
   </div>
-  <div class="card-title">{{card.cardTitle}}</div>
   <div class="container" id="scrollbar">
     <detailed-content *ngFor='let content of contents' [content]='content'>
       <div class="project-title">{{content.projectTitle}}</div>
@@ -13,7 +13,7 @@
         <highlight [highlight]='highlight'></highlight>
       </div>
       <img [src]="content.highlightsIcon" class="proj-img">
-      <description class="description" [description]='content.description'></description>
+      <description *ngIf='content.description' class="description" [description]='content.description'></description>
       <iframe *ngIf='content.video' width="490" height="242" [src]='content.video | safeUrl' frameborder="0"
         allowfullscreen>
       </iframe>

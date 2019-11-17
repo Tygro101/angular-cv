@@ -1,0 +1,6 @@
+<div class="container">
+  <app-detailed-component></app-detailed-component>
+  <div class="content">
+    <card class="item" *ngFor="let crd of cards$ | async" [card]='crd' (onClick)='cardSelected($event)'></card>
+  </div>
+</div>

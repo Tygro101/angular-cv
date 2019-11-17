@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+
+  max-height: 876px;;
+  .level1{
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    border-right: 1px solid rgb(109, 109, 109)
+
+  }
+
+  .level2{
+    width: 100%;
+    border-bottom-right-radius: 10px;
+  }
+}
