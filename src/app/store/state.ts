@@ -143,7 +143,7 @@ export const CARD_FACES: Array<CardContent> = [
                 Using Unity 3D (it's a great framework to start and develop with, very easy to adapt and very and fast learning curve),
                 the goal of the game is to shake the device as fast as you can for 5 second to charge the Spaceship, at the end of the 5 seconds the ship will launched and continue to flay until the fuel runs up,
                 the game have google play table for records to see how it the fastest child in the block`,
-                video: "https://www.youtube.com/watch?v=fOej1apChlw",
+                video: "https://www.youtube.com/embed/fOej1apChlw",
                 projectTitle: "Circle Dunk"
             },
             {
