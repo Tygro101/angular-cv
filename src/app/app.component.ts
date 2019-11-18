@@ -4,7 +4,7 @@ import { Store, select } from '@ngrx/store';
 import { AppRoot } from './store/model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import * as DetailedAcations from 'src/app/components/detailed-card-view/store/actions'
+import * as DetailedActions from 'src/app/components/detailed-card-view/store/actions'
 
 @Component({
   selector: 'app-root',
@@ -16,12 +16,13 @@ export class AppComponent implements OnInit{
   cards: Array<Card>;
   public showDetailedCard:boolean = false;
   
-  constructor(private store:Store<AppRoot>){ 
+  constructor(private store :Store<AppRoot>){ 
   }
 
 
   ngOnInit(): void {
     this.cards$ = this.store.pipe(select('state'), map((state: AppRoot)=>state.cards));
+    this.store.dispatch(new DetailedActions.CardSelectedById(1));
   }
 
   log(text:string){
@@ -34,7 +35,7 @@ export class AppComponent implements OnInit{
   }
 
   cardSelected(card:Card){
-    this.store.dispatch(new DetailedAcations.CardSelected(card));
+    this.store.dispatch(new DetailedActions.CardSelected(card));
   }
 }
 
