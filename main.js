@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <div class=\"bar\">\r\n    <h2>CV</h2>\r\n  </div>\r\n\r\n  <router-outlet></router-outlet>\r\n</div>"
+module.exports = "<div class=\"wrapper\">\r\n  <div class=\"container\">\r\n    <div class=\"bar\">\r\n      <div class=\"text\">\r\n          CV\r\n      </div>\r\n\r\n    </div>\r\n  \r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<div class=\"container\">\r\n  <div class=\"bar\">\r\n    <h2>
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container {\n  position: relative;\n  border-radius: 10px;\n  background: rgba(218, 218, 218, 0.952);\n  margin-left: 100px;\n  margin-right: 100px;\n  min-width: 640px;\n  min-height: 480px; }\n  .container .bar {\n    background: #3b3b3b;\n    line-height: 30px;\n    border-radius: 10px 10px 0 0;\n    padding-right: 10px;\n    padding-left: 14px; }\n  .container .bar h2 {\n      color: white;\n      font-size: 10px;\n      font-family: \"Times New Roman\", Times, serif; }\n"
+module.exports = ".wrapper .container {\n  position: relative;\n  border-radius: 10px;\n  background: rgba(218, 218, 218, 0.952);\n  margin-left: 100px;\n  margin-right: 100px;\n  min-width: 640px;\n  min-height: 480px; }\n  .wrapper .container .bar {\n    background: #3b3b3b;\n    line-height: 30px;\n    border-radius: 10px 10px 0 0;\n    padding-right: 10px;\n    padding-left: 14px; }\n  .wrapper .container .bar .text {\n      color: white;\n      font-size: 10px;\n      font-family: \"Times New Roman\", Times, serif; }\n"
 
 /***/ }),
 
@@ -79,6 +79,7 @@ var AppComponent = /** @class */ (function () {
     }
     AppComponent.prototype.ngOnInit = function () {
         this.cards$ = this.store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["select"])('state'), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (state) { return state.cards; }));
+        this.store.dispatch(new src_app_components_detailed_card_view_store_actions__WEBPACK_IMPORTED_MODULE_3__["CardSelectedById"](1));
     };
     AppComponent.prototype.log = function (text) {
         console.log(text);
@@ -225,7 +226,7 @@ module.exports = "<div class=\"card ripple\" [ngStyle]=\"{ 'background': card.ca
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card {\n  width: 140px;\n  margin: 10px;\n  background: #333333;\n  border-radius: 3%;\n  box-shadow: 0 1px 3px 0 rgba(75, 75, 75, 0.5); }\n  .card .img-container {\n    text-align: center; }\n  .card .img-container img {\n      margin-top: 10px;\n      text-align: center;\n      height: 100px;\n      width: 100px;\n      left: 100px;\n      -ms-grid-row-align: center;\n          align-self: center;\n      padding: 5px;\n      background: #b6b6b6;\n      border-radius: 50%; }\n  .card .card-title {\n    text-align: center;\n    margin-top: 10px;\n    padding-bottom: 20px;\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;\n    font-weight: bold;\n    color: beige; }\n  .card:hover {\n  box-shadow: 0px 4px 0 #00000033;\n  transition: box-shadow 0.15s; }\n  /* Ripple effect */\n  .ripple {\n  position: relative;\n  overflow: hidden;\n  -webkit-transform: translate3d(0, 0, 0);\n          transform: translate3d(0, 0, 0); }\n  .ripple:after {\n    content: \"\";\n    display: block;\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    pointer-events: none;\n    background-image: radial-gradient(circle, rgba(245, 245, 245, 0.705) 10%, transparent 10.01%);\n    background-repeat: no-repeat;\n    background-position: 50%;\n    -webkit-transform: scale(10, 10);\n            transform: scale(10, 10);\n    opacity: 0;\n    transition: opacity 1s, -webkit-transform .7s;\n    transition: transform .7s, opacity 1s;\n    transition: transform .7s, opacity 1s, -webkit-transform .7s; }\n  .ripple:active:after {\n    -webkit-transform: scale(0, 0);\n            transform: scale(0, 0);\n    opacity: .2;\n    transition: 0s; }\n"
+module.exports = ".card {\n  width: 140px;\n  margin: 5px;\n  background: #333333;\n  border-radius: 3%;\n  box-shadow: 0 1px 3px 0 rgba(75, 75, 75, 0.5); }\n  .card .img-container {\n    text-align: center; }\n  .card .img-container img {\n      margin-top: 10px;\n      text-align: center;\n      height: 100px;\n      width: 100px;\n      left: 100px;\n      -ms-grid-row-align: center;\n          align-self: center;\n      padding: 5px;\n      background: #b6b6b6;\n      border-radius: 50%; }\n  .card .card-title {\n    text-align: center;\n    margin-top: 10px;\n    padding-bottom: 20px;\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;\n    font-weight: bold;\n    color: beige; }\n  .card:hover {\n  box-shadow: 0px 4px 0 #00000033;\n  transition: box-shadow 0.15s; }\n  /* Ripple effect */\n  .ripple {\n  position: relative;\n  overflow: hidden;\n  -webkit-transform: translate3d(0, 0, 0);\n          transform: translate3d(0, 0, 0); }\n  .ripple:after {\n    content: \"\";\n    display: block;\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    pointer-events: none;\n    background-image: radial-gradient(circle, rgba(245, 245, 245, 0.705) 10%, transparent 10.01%);\n    background-repeat: no-repeat;\n    background-position: 50%;\n    -webkit-transform: scale(10, 10);\n            transform: scale(10, 10);\n    opacity: 0;\n    transition: opacity 1s, -webkit-transform .7s;\n    transition: transform .7s, opacity 1s;\n    transition: transform .7s, opacity 1s, -webkit-transform .7s; }\n  .ripple:active:after {\n    -webkit-transform: scale(0, 0);\n            transform: scale(0, 0);\n    opacity: .2;\n    transition: 0s; }\n"
 
 /***/ }),
 
@@ -481,23 +482,34 @@ var DetailedCardViewComponent = /** @class */ (function () {
 /*!****************************************************************!*\
   !*** ./src/app/components/detailed-card-view/store/actions.ts ***!
   \****************************************************************/
-/*! exports provided: CARD_SELECTED, CARD_VIEW_SETTED, CardSelected, CardSetted */
+/*! exports provided: CARD_SELECTED, CARD_VIEW_SETTED, CARD_VIEW_SELECTED_BY_ID, CardSelected, CardSelectedById, CardSetted */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CARD_SELECTED", function() { return CARD_SELECTED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CARD_VIEW_SETTED", function() { return CARD_VIEW_SETTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CARD_VIEW_SELECTED_BY_ID", function() { return CARD_VIEW_SELECTED_BY_ID; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardSelected", function() { return CardSelected; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardSelectedById", function() { return CardSelectedById; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardSetted", function() { return CardSetted; });
 var CARD_SELECTED = "[Detailed Card View] Card Selected";
 var CARD_VIEW_SETTED = "[Detailed Card View] Card View Setted";
+var CARD_VIEW_SELECTED_BY_ID = "[Detailed Card View] Card View Setted By Id";
 var CardSelected = /** @class */ (function () {
     function CardSelected(payload) {
         this.payload = payload;
         this.type = CARD_SELECTED;
     }
     return CardSelected;
+}());
+
+var CardSelectedById = /** @class */ (function () {
+    function CardSelectedById(payload) {
+        this.payload = payload;
+        this.type = CARD_VIEW_SELECTED_BY_ID;
+    }
+    return CardSelectedById;
 }());
 
 var CardSetted = /** @class */ (function () {
@@ -554,11 +566,23 @@ var DetailedViewEffects = /** @class */ (function () {
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["mergeMap"])(function (action) { return _this.cardsDataService.getDetailedCardCards(action.payload).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (face) {
             return new _actions__WEBPACK_IMPORTED_MODULE_3__["CardSetted"](face);
         })); }));
+        this.loadCardViewById$ = this.actions$
+            .pipe(Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_1__["ofType"])(_actions__WEBPACK_IMPORTED_MODULE_3__["CARD_VIEW_SELECTED_BY_ID"]), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (payload) {
+            if (payload)
+                return true;
+            return false;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["mergeMap"])(function (action) { return _this.cardsDataService.getDetailedCardCardsById((action.payload)).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (face) {
+            return new _actions__WEBPACK_IMPORTED_MODULE_3__["CardSetted"](face);
+        })); }));
     }
     __decorate([
         Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_1__["Effect"])(),
         __metadata("design:type", Object)
     ], DetailedViewEffects.prototype, "loadCardView$", void 0);
+    __decorate([
+        Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_1__["Effect"])(),
+        __metadata("design:type", Object)
+    ], DetailedViewEffects.prototype, "loadCardViewById$", void 0);
     DetailedViewEffects = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __metadata("design:paramtypes", [_ngrx_effects__WEBPACK_IMPORTED_MODULE_1__["Actions"], src_app_services_cards_data_service__WEBPACK_IMPORTED_MODULE_4__["CardsDataService"]])
@@ -631,7 +655,7 @@ module.exports = "<div class=\"container\">\n  <div class=\"content\">\n    <div
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".content {\n  height: 100%; }\n\n.video:last-child {\n  margin-bottom: 10px; }\n\n.proj {\n  padding: 10px;\n  font-size: 20px;\n  text-align: center; }\n\n.image {\n  width: 50px;\n  height: 50px;\n  margin: auto;\n  padding: 5px;\n  background: #ffffff69;\n  border-radius: 50%;\n  margin-left: 10px; }\n\n.image ::ng-deep img {\n    width: 50px; }\n\n.highlights {\n  display: -ms-grid;\n  display: grid;\n  width: 100%;\n  grid-auto-columns: auto;\n  grid-template-columns: repeat(auto-fill, minmax(auto, 122px));\n  padding: 0px 10px 10px 10px; }\n\n.highlights ::ng-deep .item {\n  margin: auto;\n  align-items: center;\n  display: flex;\n  height: 50px;\n  width: 100%; }\n\n.highlights ::ng-deep .item img {\n    text-align: center;\n    height: 20px;\n    width: 20px;\n    -ms-grid-row-align: center;\n        align-self: center;\n    padding: 5px;\n    border-radius: 50%; }\n\n.highlights ::ng-deep .item .title {\n    font-size: 12px;\n    width: 85%;\n    font-weight: bold;\n    font-family: cursive !important;\n    color: beige;\n    margin: auto; }\n\n.highlights ::ng-deep .item .title .key {\n      font-size: 11px; }\n\n.highlights ::ng-deep .item .title div {\n      margin-bottom: 0px; }\n\n.title {\n  font-size: 14px;\n  font-weight: bold;\n  font-family: cursive !important;\n  color: beige;\n  margin: auto;\n  margin-bottom: 5px; }\n\n.proj {\n  margin-left: 10px; }\n\n.description {\n  width: 100%;\n  color: beige;\n  margin: 20px; }\n\n.video {\n  text-align: center; }\n\n::ng-deep .separator {\n  height: 2px;\n  margin: auto;\n  width: 60%;\n  margin-bottom: 20px;\n  background: beige; }\n"
+module.exports = ".content {\n  height: 100%; }\n\n.video:last-child {\n  margin-bottom: 10px; }\n\n.proj {\n  padding: 10px;\n  font-size: 20px;\n  text-align: center; }\n\n.image {\n  width: 50px;\n  height: 50px;\n  margin: auto;\n  padding: 5px;\n  background: #ffffff69;\n  border-radius: 50%;\n  margin-left: 10px; }\n\n.image ::ng-deep img {\n    width: 50px; }\n\n.highlights {\n  display: -ms-grid;\n  display: grid;\n  width: 100%;\n  grid-auto-columns: auto;\n  grid-template-columns: repeat(auto-fill, minmax(auto, 160px));\n  padding: 0px 10px 10px 10px; }\n\n.highlights ::ng-deep .item {\n  margin: auto;\n  align-items: center;\n  display: flex;\n  height: 50px;\n  width: 100%; }\n\n.highlights ::ng-deep .item img {\n    text-align: center;\n    height: 20px;\n    width: 20px;\n    -ms-grid-row-align: center;\n        align-self: center;\n    padding: 5px;\n    border-radius: 50%; }\n\n.highlights ::ng-deep .item .title {\n    font-size: 12px;\n    width: 85%;\n    font-weight: bold;\n    font-family: cursive !important;\n    color: beige;\n    margin: auto; }\n\n.highlights ::ng-deep .item .title .key {\n      font-size: 11px; }\n\n.highlights ::ng-deep .item .title div {\n      margin-bottom: 0px; }\n\n.title {\n  font-size: 14px;\n  font-weight: bold;\n  font-family: cursive !important;\n  color: beige;\n  margin: auto;\n  margin-bottom: 5px; }\n\n.proj {\n  margin-left: 10px; }\n\n.description {\n  width: 100%;\n  color: beige;\n  margin: 20px; }\n\n.video {\n  text-align: center; }\n\n::ng-deep .separator {\n  height: 2px;\n  margin: auto;\n  width: 60%;\n  margin-bottom: 20px;\n  background: beige; }\n"
 
 /***/ }),
 
@@ -850,7 +874,7 @@ module.exports = "<div class=\"card ripple\" [ngStyle]=\"{ 'background': card.ca
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card {\n  width: 250px;\n  margin: 10px;\n  display: flex;\n  background: #333333;\n  border-radius: 3%;\n  box-shadow: 0 1px 3px 0 rgba(75, 75, 75, 0.5); }\n  .card .img-container {\n    padding: 10px;\n    text-align: center; }\n  .card .img-container img {\n      margin-top: 10px;\n      text-align: center;\n      height: 70px;\n      width: 70px;\n      left: 100px;\n      -ms-grid-row-align: center;\n      align-self: center;\n      padding: 5px;\n      background: #b6b6b6;\n      border-radius: 50%; }\n  .card .card-title {\n    text-align: center;\n    -ms-grid-row-align: center;\n        align-self: center;\n    font-size: 15px;\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;\n    font-weight: bold;\n    color: beige;\n    width: 100%; }\n  .card:hover {\n  box-shadow: 0px 4px 0 #00000033;\n  transition: box-shadow 0.15s;\n  opacity: 0.8; }\n"
+module.exports = ".card {\n  margin: 7px;\n  display: flex;\n  background: #333333;\n  border-radius: 3%;\n  box-shadow: 0 1px 3px 0 rgba(75, 75, 75, 0.5); }\n  .card .img-container {\n    padding: 10px;\n    text-align: center; }\n  .card .img-container img {\n      text-align: center;\n      height: 50px;\n      width: 50px;\n      left: 100px;\n      -ms-grid-row-align: center;\n      align-self: center;\n      padding: 5px;\n      background: #b6b6b6;\n      border-radius: 50%; }\n  .card .card-title {\n    text-align: center;\n    -ms-grid-row-align: center;\n        align-self: center;\n    font-size: 15px;\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;\n    font-weight: bold;\n    color: beige;\n    width: 100%; }\n  .card:hover {\n  box-shadow: 0px 4px 0 #00000033;\n  transition: box-shadow 0.05s;\n  opacity: 0.8; }\n"
 
 /***/ }),
 
@@ -925,7 +949,7 @@ module.exports = "<div class=\"container\">\n  <div class=\"level1\" id=\"scroll
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container {\n  width: 100%;\n  overflow: hidden;\n  display: flex;\n  height: calc(100vh - 80px); }\n  .container .level1 {\n    overflow-y: auto;\n    min-width: 270px;\n    padding-left: 5px;\n    padding-top: 5px;\n    padding-right: 5px;\n    border-right: 1px solid #6d6d6d; }\n  .container .level2 {\n    padding: 5px;\n    width: 100%;\n    border-bottom-right-radius: 10px; }\n  #scrollbar::-webkit-scrollbar-track {\n  border-radius: 10px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar {\n  width: 12px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: beige;\n  padding-right: 1px;\n  background-clip: content-box;\n  /* padding-right: 9px; */\n  border: 3px solid transparent; }\n  #scrollbar::-webkit-scrollbar-thumb:hover {\n  border-radius: 10px;\n  background-color: #fff; }\n  #scrollbar::-webkit-scrollbar-thumb:active {\n  background-color: linear-gradient(left, #22add4, #1e98ba); }\n"
+module.exports = ".container {\n  width: 100%;\n  overflow: hidden;\n  display: flex;\n  height: calc(100vh - 80px); }\n  .container .level1 {\n    overflow-y: auto;\n    min-width: 220px;\n    padding-left: 5px;\n    padding-top: 5px;\n    padding-right: 5px;\n    border-right: 1px solid #6d6d6d; }\n  .container .level2 {\n    padding: 5px;\n    width: 100%;\n    border-bottom-right-radius: 10px; }\n  #scrollbar::-webkit-scrollbar-track {\n  border-radius: 10px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar {\n  width: 12px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: beige;\n  padding-right: 1px;\n  background-clip: content-box;\n  /* padding-right: 9px; */\n  border: 3px solid transparent; }\n  #scrollbar::-webkit-scrollbar-thumb:hover {\n  border-radius: 10px;\n  background-color: #fff; }\n  #scrollbar::-webkit-scrollbar-thumb:active {\n  background-color: linear-gradient(left, #22add4, #1e98ba); }\n"
 
 /***/ }),
 
@@ -1120,6 +1144,12 @@ var CardsDataService = /** @class */ (function () {
     }
     CardsDataService.prototype.getDetailedCardCards = function (card) {
         var face = src_app_store_state__WEBPACK_IMPORTED_MODULE_2__["CARD_FACES"].find(function (face) { return face.cardId == card.cardId; });
+        face = __assign({}, face, card);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(face);
+    };
+    CardsDataService.prototype.getDetailedCardCardsById = function (id) {
+        var face = src_app_store_state__WEBPACK_IMPORTED_MODULE_2__["CARD_FACES"].find(function (face) { return face.cardId === id; });
+        var card = src_app_store_state__WEBPACK_IMPORTED_MODULE_2__["CARDS"].find(function (card) { return card.cardId === id; });
         face = __assign({}, face, card);
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(face);
     };
