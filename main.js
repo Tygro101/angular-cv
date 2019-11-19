@@ -194,8 +194,7 @@ var AppModule = /** @class */ (function () {
                     maxAge: 25,
                     logOnly: src_environments_environment__WEBPACK_IMPORTED_MODULE_8__["environment"].production,
                 }),
-                _angular_router__WEBPACK_IMPORTED_MODULE_16__["RouterModule"].forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
-                )
+                _angular_router__WEBPACK_IMPORTED_MODULE_16__["RouterModule"].forRoot(appRoutes)
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
