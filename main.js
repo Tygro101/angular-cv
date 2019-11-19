@@ -391,7 +391,7 @@ module.exports = "<div #DetailedCard *ngIf='show' class=\"detailed-container\">\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".detailed-container {\n  width: 100%;\n  height: 100%;\n  border-radius: 5px;\n  display: -ms-grid;\n  display: grid;\n  background: #acacac;\n  -ms-grid-rows: 1fr 3fr;\n      grid-template-rows: 1fr 3fr; }\n  .detailed-container .img-container {\n    text-align: center; }\n  .detailed-container .img-container img {\n      margin-top: 20px;\n      text-align: center;\n      height: 100px;\n      width: 100px;\n      left: 100px;\n      -ms-grid-row-align: center;\n          align-self: center;\n      padding: 5px;\n      background: #b6b6b6;\n      border-radius: 50%; }\n  .detailed-container .card-title {\n    font-family: cursive !important;\n    text-align: center;\n    margin-top: 5px;\n    font-size: 17px;\n    margin-bottom: 10px;\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;\n    font-weight: bold;\n    color: beige; }\n  .detailed-container .content-header {\n    display: flex;\n    margin: 4px;\n    margin-left: 9px;\n    font-family: cursive;\n    color: antiquewhite;\n    font-weight: bold; }\n  .detailed-container .content-header img {\n      cursor: pointer;\n      margin-right: 10px;\n      width: 10px;\n      height: 10px; }\n  .detailed-container .container {\n    overflow-y: auto;\n    overflow-x: hidden;\n    position: relative;\n    height: 100%; }\n  .detailed-container .container detailed-content:last-child .separator {\n      height: 0px; }\n  #scrollbar::-webkit-scrollbar-track {\n  border-radius: 10px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar {\n  width: 12px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: beige;\n  padding-right: 1px;\n  background-clip: content-box;\n  /* padding-right: 9px; */\n  border: 3px solid transparent; }\n  #scrollbar::-webkit-scrollbar-thumb:hover {\n  border-radius: 10px;\n  background-color: #fff; }\n  #scrollbar::-webkit-scrollbar-thumb:active {\n  background-color: linear-gradient(left, #22add4, #1e98ba); }\n"
+module.exports = ".detailed-container {\n  width: 100%;\n  height: 100%;\n  border-radius: 5px;\n  display: -ms-grid;\n  display: grid;\n  background: #acacac;\n  -ms-grid-rows: 1fr 3fr;\n      grid-template-rows: 1fr 3fr; }\n  .detailed-container .img-container {\n    text-align: center; }\n  .detailed-container .img-container img {\n      margin-top: 20px;\n      text-align: center;\n      height: 100px;\n      width: 100px;\n      left: 100px;\n      -ms-grid-row-align: center;\n          align-self: center;\n      padding: 5px;\n      background: #b6b6b6;\n      border-radius: 50%; }\n  .detailed-container .card-title {\n    font-family: cursive !important;\n    text-align: center;\n    margin-top: 5px;\n    font-size: 20px;\n    margin-bottom: 10px;\n    font-family: \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;\n    font-weight: bold;\n    color: beige; }\n  .detailed-container .content-header {\n    display: flex;\n    margin: 4px;\n    margin-left: 9px;\n    font-family: cursive;\n    color: antiquewhite;\n    font-weight: bold; }\n  .detailed-container .content-header img {\n      cursor: pointer;\n      margin-right: 10px;\n      width: 10px;\n      height: 10px; }\n  .detailed-container .container {\n    overflow-y: auto;\n    overflow-x: hidden;\n    position: relative;\n    height: 100%; }\n  .detailed-container .container detailed-content:last-child .separator {\n      height: 0px; }\n  #scrollbar::-webkit-scrollbar-track {\n  border-radius: 10px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar {\n  width: 12px;\n  background-color: transparent; }\n  #scrollbar::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background-color: beige;\n  padding-right: 1px;\n  background-clip: content-box;\n  /* padding-right: 9px; */\n  border: 3px solid transparent; }\n  #scrollbar::-webkit-scrollbar-thumb:hover {\n  border-radius: 10px;\n  background-color: #fff; }\n  #scrollbar::-webkit-scrollbar-thumb:active {\n  background-color: linear-gradient(left, #22add4, #1e98ba); }\n"
 
 /***/ }),
 
@@ -655,7 +655,7 @@ module.exports = "<div class=\"container\">\n  <div class=\"content\">\n    <div
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".content {\n  height: 100%; }\n\n.video:last-child {\n  margin-bottom: 10px; }\n\n.proj {\n  padding: 10px;\n  font-size: 20px;\n  text-align: center; }\n\n.image {\n  width: 50px;\n  height: 50px;\n  margin: auto;\n  padding: 5px;\n  background: #ffffff69;\n  border-radius: 50%;\n  margin-left: 10px; }\n\n.image ::ng-deep img {\n    width: 50px; }\n\n.highlights {\n  display: -ms-grid;\n  display: grid;\n  width: 100%;\n  grid-auto-columns: auto;\n  grid-template-columns: repeat(auto-fill, minmax(auto, 160px));\n  padding: 0px 10px 10px 10px; }\n\n.highlights ::ng-deep .item {\n  margin: auto;\n  align-items: center;\n  display: flex;\n  height: 50px;\n  width: 100%; }\n\n.highlights ::ng-deep .item img {\n    text-align: center;\n    height: 20px;\n    width: 20px;\n    -ms-grid-row-align: center;\n        align-self: center;\n    padding: 5px;\n    border-radius: 50%; }\n\n.highlights ::ng-deep .item .title {\n    font-size: 12px;\n    width: 85%;\n    font-weight: bold;\n    font-family: cursive !important;\n    color: beige;\n    margin: auto; }\n\n.highlights ::ng-deep .item .title .key {\n      font-size: 11px; }\n\n.highlights ::ng-deep .item .title div {\n      margin-bottom: 0px; }\n\n.title {\n  font-size: 14px;\n  font-weight: bold;\n  font-family: cursive !important;\n  color: beige;\n  margin: auto;\n  margin-bottom: 5px; }\n\n.proj {\n  margin-left: 10px; }\n\n.description {\n  width: 100%;\n  color: beige;\n  margin: 20px; }\n\n.video {\n  text-align: center; }\n\n::ng-deep .separator {\n  height: 2px;\n  margin: auto;\n  width: 60%;\n  margin-bottom: 20px;\n  background: beige; }\n"
+module.exports = ".content {\n  height: 100%; }\n\n.video:last-child {\n  margin-bottom: 10px; }\n\n.proj {\n  padding: 10px;\n  font-size: 20px;\n  text-align: center; }\n\n.image {\n  width: 50px;\n  height: 50px;\n  margin: auto;\n  padding: 5px;\n  background: #ffffff69;\n  border-radius: 50%;\n  margin-left: 10px; }\n\n.image ::ng-deep img {\n    width: 50px; }\n\n.highlights {\n  display: -ms-grid;\n  display: grid;\n  width: 100%;\n  grid-auto-columns: auto;\n  grid-template-columns: repeat(auto-fill, minmax(auto, 160px));\n  padding: 0px 10px 10px 10px; }\n\n.highlights ::ng-deep .item {\n  margin: auto;\n  align-items: center;\n  display: flex;\n  height: 50px;\n  width: 100%; }\n\n.highlights ::ng-deep .item img {\n    text-align: center;\n    height: 20px;\n    width: 20px;\n    -ms-grid-row-align: center;\n        align-self: center;\n    padding: 5px;\n    border-radius: 50%; }\n\n.highlights ::ng-deep .item .title {\n    font-size: 12px;\n    width: 85%;\n    font-weight: bold;\n    font-family: cursive !important;\n    color: beige;\n    margin: auto; }\n\n.highlights ::ng-deep .item .title .key {\n      font-size: 12px; }\n\n.highlights ::ng-deep .item .title div {\n      margin-bottom: 0px; }\n\n.title {\n  font-size: 16px;\n  font-weight: bold;\n  font-family: cursive !important;\n  color: beige;\n  margin: auto;\n  margin-bottom: 5px; }\n\n.proj {\n  margin-left: 10px; }\n\n.description {\n  width: 100%;\n  color: beige;\n  margin: 20px; }\n\n.video {\n  text-align: center; }\n\n::ng-deep .separator {\n  height: 2px;\n  margin: auto;\n  width: 60%;\n  margin-bottom: 20px;\n  background: beige; }\n"
 
 /***/ }),
 
@@ -722,7 +722,7 @@ module.exports = "<div class=\"highlight-container\">\r\n  <img [src]=\"img\" al
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".highlight-container {\n  display: flex; }\n"
+module.exports = ".highlight-container {\n  display: flex;\n  font-size: 16px; }\n"
 
 /***/ }),
 
@@ -1329,7 +1329,7 @@ var CARD_FACES = [
                 highlights: [
                     { title: { key: 'Project Type', value: 'Gaming' }, img: 'Settings' },
                     { title: { key: 'Framework', value: 'Angular ^2.0' }, img: 'Angular' },
-                    { title: { key: 'unit Tests', value: 'Angular ^2.0' }, img: 'Angular' }
+                    { title: { key: 'unit Tests', value: 'Karma' }, img: 'Angular' }
                 ],
                 description: "This is the classic <a href='https://tygro101.github.io//minesweeper-angular/'>Minesweeper</a> game, with the authentic feeling, created with angular 2.0 framework,\n            you can find the open source <a href='https://github.com/Tygro101/minesweeper-angular'>here</a>, the control are with the mouse, SHIFT + Mouse Click for flag marking",
                 video: "https://www.youtube.com/embed/GsRv5kUafoU",
@@ -1443,7 +1443,7 @@ var CARD_FACES = [
                     { title: { key: 'Script', value: 'javascript' }, img: 'Angular' },
                     { title: { key: 'Communication', value: 'socket.io' }, img: 'Angular' }
                 ],
-                description: "This is a start of a poker server, should be a mobile clinet with socket connection to server, this is the <a href='https://github.com/Tygro101/GitTest'>Source</a>",
+                description: "This is a start of a poker server, should be a mobile client with socket connection to server, this is the <a href='https://github.com/Tygro101/GitTest'>Source</a>",
                 projectTitle: "Poker"
             }
         ]
@@ -1476,8 +1476,8 @@ var CARD_FACES = [
             {
                 highlightsIcon: "assets/img/job.png",
                 highlights: [
-                    { title: { key: 'End Date', value: '6.2018' }, img: 'Event' },
                     { title: { key: 'Start Date', value: '5.2015' }, img: 'Event' },
+                    { title: { key: 'End Date', value: '6.2018' }, img: 'Event' },
                     { title: { key: 'Job Title', value: 'Software Developer Engineer' }, img: 'Settings' },
                     { title: { key: 'Server Side', value: 'C#' }, img: 'Settings' },
                     { title: { key: 'E2E Testing', value: 'Robot Framework, Python, C#' }, img: 'Settings' },
@@ -1488,8 +1488,8 @@ var CARD_FACES = [
             {
                 highlightsIcon: "assets/img/job.png",
                 highlights: [
-                    { title: { key: 'End Date', value: '5.2015' }, img: 'Event' },
                     { title: { key: 'Start Date', value: '10.2014' }, img: 'Event' },
+                    { title: { key: 'End Date', value: '5.2015' }, img: 'Event' },
                     { title: { key: 'Job Title', value: 'QA Automation Engineer' }, img: 'Settings' },
                     { title: { key: 'E2E Testing', value: 'Robot Framework, Python, C#' }, img: 'Settings' },
                 ],
