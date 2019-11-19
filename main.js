@@ -166,7 +166,7 @@ var appRoutes = [
         path: 'old',
         component: _components_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_17__["HomePageComponent"]
     },
-    { path: '', component: _components_new_version_new_version_component__WEBPACK_IMPORTED_MODULE_18__["NewVersionComponent"] }
+    { path: '', component: _components_new_version_new_version_component__WEBPACK_IMPORTED_MODULE_18__["NewVersionComponent"], pathMatch: 'full' }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -1196,6 +1196,8 @@ var ImageResolverService = /** @class */ (function () {
         this.images["Phone"] = "assets/img/highlights/phone.svg";
         this.images["Angular"] = "assets/img/highlights/angular.svg";
         this.images["Settings"] = "assets/img/highlights/settings.svg";
+        this.images["Status"] = "assets/img/highlights/status.svg";
+        this.images["Event"] = "assets/img/highlights/event.svg";
     }
     ImageResolverService.prototype.resolveImg = function (key) {
         return this.images[key];
@@ -1459,9 +1461,9 @@ var CARD_FACES = [
         cardId: 7,
         content: [
             {
-                highlightsIcon: "assets/img/project-highlights/minesweeper.png",
+                highlightsIcon: "assets/img/job.png",
                 highlights: [
-                    { title: { key: 'Start Date', value: '6.2018' }, img: 'Settings' },
+                    { title: { key: 'Start Date', value: '6.2018' }, img: 'Event' },
                     { title: { key: 'Job Title', value: 'Full Stack Engineer' }, img: 'Settings' },
                     { title: { key: 'Client Side', value: 'Angular' }, img: 'Angular' },
                     { title: { key: 'Server Side', value: 'ASP.net' }, img: 'Settings' },
@@ -1472,10 +1474,10 @@ var CARD_FACES = [
                 description: "In this period we started to create and managed scalable angular application from scratch using NGRX for client state manage, and most of angular abilities",
             },
             {
-                highlightsIcon: "assets/img/project-highlights/minesweeper.png",
+                highlightsIcon: "assets/img/job.png",
                 highlights: [
-                    { title: { key: 'End Date', value: '6.2018' }, img: 'Settings' },
-                    { title: { key: 'Start Date', value: '5.2015' }, img: 'Settings' },
+                    { title: { key: 'End Date', value: '6.2018' }, img: 'Event' },
+                    { title: { key: 'Start Date', value: '5.2015' }, img: 'Event' },
                     { title: { key: 'Job Title', value: 'Software Developer Engineer' }, img: 'Settings' },
                     { title: { key: 'Server Side', value: 'C#' }, img: 'Settings' },
                     { title: { key: 'E2E Testing', value: 'Robot Framework, Python, C#' }, img: 'Settings' },
@@ -1484,10 +1486,10 @@ var CARD_FACES = [
                 description: "Most of the work was by adding new features to or server, in this",
             },
             {
-                highlightsIcon: "assets/img/project-highlights/minesweeper.png",
+                highlightsIcon: "assets/img/job.png",
                 highlights: [
-                    { title: { key: 'End Date', value: '5.2015' }, img: 'Settings' },
-                    { title: { key: 'Start Date', value: '10.2014' }, img: 'Settings' },
+                    { title: { key: 'End Date', value: '5.2015' }, img: 'Event' },
+                    { title: { key: 'Start Date', value: '10.2014' }, img: 'Event' },
                     { title: { key: 'Job Title', value: 'QA Automation Engineer' }, img: 'Settings' },
                     { title: { key: 'E2E Testing', value: 'Robot Framework, Python, C#' }, img: 'Settings' },
                 ],
