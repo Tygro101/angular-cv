@@ -25,7 +25,7 @@ const appRoutes: Routes = [
     path: 'old',
     component: HomePageComponent 
   },
-  { path: '', component:  NewVersionComponent}
+  { path: '', component:  NewVersionComponent, pathMatch: 'full'}
 ];
 
 
@@ -53,8 +53,7 @@ const appRoutes: Routes = [
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
     RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      appRoutes
     )
   ],
   providers: [],

@@ -87,7 +87,7 @@ export const CARD_FACES: Array<CardContent> = [
             highlights: [
                 { title: { key: 'Project Type', value: 'Gaming' }, img: 'Settings' },
                 { title: { key: 'Framework', value: 'Angular ^2.0' }, img: 'Angular' },
-                { title: { key: 'unit Tests', value: 'Angular ^2.0' }, img: 'Angular' }
+                { title: { key: 'unit Tests', value: 'Karma' }, img: 'Angular' }
             ],
             description: `This is the classic <a href='https://tygro101.github.io//minesweeper-angular/'>Minesweeper</a> game, with the authentic feeling, created with angular 2.0 framework,
             you can find the open source <a href='https://github.com/Tygro101/minesweeper-angular'>here</a>, the control are with the mouse, SHIFT + Mouse Click for flag marking`,
@@ -214,7 +214,7 @@ export const CARD_FACES: Array<CardContent> = [
                     { title: { key: 'Script', value: 'javascript' }, img: 'Angular' },
                     { title: { key: 'Communication', value: 'socket.io' }, img: 'Angular' }
                 ],
-                description: `This is a start of a poker server, should be a mobile clinet with socket connection to server, this is the <a href='https://github.com/Tygro101/GitTest'>Source</a>`,
+                description: `This is a start of a poker server, should be a mobile client with socket connection to server, this is the <a href='https://github.com/Tygro101/GitTest'>Source</a>`,
                 projectTitle: "Poker"
             }
         ]
@@ -233,9 +233,9 @@ export const CARD_FACES: Array<CardContent> = [
         cardId: 7,
         content: [
             {
-                highlightsIcon: "assets/img/project-highlights/minesweeper.png",
+                highlightsIcon: "assets/img/job.png",
                 highlights: [
-                    { title: { key: 'Start Date', value: '6.2018' }, img: 'Settings' },
+                    { title: { key: 'Start Date', value: '6.2018' }, img: 'Event' },
                     { title: { key: 'Job Title', value: 'Full Stack Engineer' }, img: 'Settings' },
                     { title: { key: 'Client Side', value: 'Angular' }, img: 'Angular' },
                     { title: { key: 'Server Side', value: 'ASP.net' }, img: 'Settings' },
@@ -247,10 +247,10 @@ export const CARD_FACES: Array<CardContent> = [
                 description: `In this period we started to create and managed scalable angular application from scratch using NGRX for client state manage, and most of angular abilities`,
             },
             {
-                highlightsIcon: "assets/img/project-highlights/minesweeper.png",
+                highlightsIcon: "assets/img/job.png",
                 highlights: [
-                    { title: { key: 'End Date', value: '6.2018' }, img: 'Settings' },
-                    { title: { key: 'Start Date', value: '5.2015' }, img: 'Settings' },
+                    { title: { key: 'Start Date', value: '5.2015' }, img: 'Event' },
+                    { title: { key: 'End Date', value: '6.2018' }, img: 'Event' },
                     { title: { key: 'Job Title', value: 'Software Developer Engineer' }, img: 'Settings' },
                     { title: { key: 'Server Side', value: 'C#' }, img: 'Settings' },
                     { title: { key: 'E2E Testing', value: 'Robot Framework, Python, C#' }, img: 'Settings' },
@@ -260,12 +260,12 @@ export const CARD_FACES: Array<CardContent> = [
                 description: `Most of the work was by adding new features to or server, in this`,
             },
             {
-                highlightsIcon: "assets/img/project-highlights/minesweeper.png",
+                highlightsIcon: "assets/img/job.png",
                 highlights: [
-                    { title: { key: 'End Date', value: '5.2015' }, img: 'Settings' },
-                    { title: { key: 'Start Date', value: '10.2014' }, img: 'Settings' },
+                    { title: { key: 'Start Date', value: '10.2014' }, img: 'Event' },
+                    { title: { key: 'End Date', value: '5.2015' }, img: 'Event' },
                     { title: { key: 'Job Title', value: 'QA Automation Engineer' }, img: 'Settings' },
-                    { title: { key: 'E2E Testing', value: 'Robot Framework, Python, C#' }, img: 'Settings' },
+                    { title: { key: 'E2E Testing', value: 'Robot Framework, Python, C#' }, img: 'Settings' }, 
 
                 ],
                 projectTitle: "Software Developer Engineer @ dbMotion (Allscripts)",
